@@ -1,0 +1,23 @@
+header {
+	background-color: #10BCE3;
+}
+h1{
+	color: #10BCE3;
+	font-family: 'Leckerli One', cursive;
+} 
+h2{
+	font-family: 'Leckerli One', cursive;
+	text-align: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 15px;
+}
+.class50{
+	width: 50%;
+	float: left;
+}
+#logo{
+	width: 10%;
+	float: left;
+	padding-right: 15px;
+}
