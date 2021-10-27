@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Colorin Colorado</title>
+	<link rel="stylesheet" type="text/css" href="estilos/estilosCC.css">
+	<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+	
+  <!-- BOOTSWATCH -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="subIm.js"></script>-->
+</head>
+<body>
+   <header>
+   	<div id="logo">
+   		<a title="Cuentos cortos" href="index.html"><img src="iconos/logo1.4.png" height="80px" /></a>
+   	</div>
+   <div class="cabecera">
+   		<h2>Curso de Comprension de Lectura</h2>
+   	</div>
+   </header>
+   <div style="padding-left: 35px; padding-top: 25px;">
+    <a class="boton_personalizado" href="index.html">Atrás</a>
+</div>
+<hr>
+     <div id="titulo">Cuentos Cortos</div>  
+
+    <section id="categorias" class="containMain">
+      <div class="row" id="foto">
+        <div class="col-md-4" id="Fabulas" align="center">
+          <h2>Fabulas</h2>
+          <div id="cuentosFab"></div>
+        </div>
+        <div class="col-md-4" id="Clasicos" align="center">
+          <h2>Clasicos</h2>
+          <div id="cuentosClas"></div>
+        </div>
+        <div class="col-md-4" id="Fantasia" align="center">
+          <h2>Fantasia</h2>
+          <div id="cuentosFan"></div>
+        </div>
+      </div>
+    </section>
+	   
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+      authDomain: "colorin-colorado-f857f.firebaseapp.com",
+      databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+      projectId: "colorin-colorado-f857f",
+      storageBucket: "colorin-colorado-f857f.appspot.com",
+      messagingSenderId: "31331535773",
+      appId: "1:31331535773:web:55d57a73caeb602085bd74",
+      measurementId: "G-37YPHDXTPN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- CUSTOM CODE -->
+  <script src="CuentosCortos.js"></script> 
+   
+</body>
+<hr>
+<footer id="footer">
+
+</footer>
+</html>

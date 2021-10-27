@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Colorin Colorado</title>
+	<link rel="stylesheet" type="text/css" href="estilos/estilosPrin.css">
+	<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+	
+  <!-- BOOTSWATCH -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+
+</head>
+<body>
+   <header>
+
+   	<div id="logo">
+   		<img src="iconos/logo1.4.png" height="80px" style="margin:10px">
+   	</div>
+   	<div id="cabecera">
+   		<h2>Curso de Lectura de Comprension</h2>
+   	</div>
+   	
+   </header>
+<hr>
+<div align="center" id="titulo">
+  Colorín Colorado
+</div>
+
+<section>
+  <div align="center" style="padding-bottom: 30px; margin-top: 35px;">
+    <img src="iconos/cuentosCortos.png" height="250px" alt="cortitos" />
+    
+    <div align="center"style="padding-left: 35px; padding-top: 25px;">
+      <a class="boton_personalizado" href="CuentosCortos.html">Cuentos Cortos</a>
+    </div>
+  </div>
+</section>
+   
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>  
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+      authDomain: "colorin-colorado-f857f.firebaseapp.com",
+      databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+      projectId: "colorin-colorado-f857f",
+      storageBucket: "colorin-colorado-f857f.appspot.com",
+      messagingSenderId: "31331535773",
+      appId: "1:31331535773:web:55d57a73caeb602085bd74",
+      measurementId: "G-37YPHDXTPN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+<hr>
+<footer>
+	<div  id="footer" align="center" style="padding-right:150px;padding-left: 150px ;margin-bottom: 20px; font-size: large;font-family: 'Delius', cursive;" >
+   <b>	Esperamos que tus pequeños se diviertan aprendiendo con nuestras lecturas y sus actividades. 
+    <br>Para Colorin Colorado el aprendizaje debe ser siempre una experiencia divertida que motive a los niños. Tal como lo dijo Francesco Tonucci, psicopedagogo italiano:
+       <br>"Todos los aprendizajes más importantes de la vida se hacen con Diversion" </b>
+   </div>
+</footer>
+</html>

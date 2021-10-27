@@ -1,0 +1,54 @@
+header {
+	background-color: #10BCE3;
+}
+#titulo{
+	color: #10BCE3;
+	font-family: 'Leckerli One', cursive;
+  font-size: 1.7cm;
+} 
+#boton{
+	font-family: 'Leckerli One', cursive;
+	font-size: large;
+}
+.class50{
+	width: 50%;
+	float: left;
+}
+#cabecera{
+	font-family: 'Leckerli One', cursive;
+	text-align: left;
+  font-size: 0.7cm;
+	padding-top: 30px;
+	padding-bottom: 40px;
+	padding-left: 25px;
+}
+#logo{
+	width: 10%;
+	float: left;
+	padding-right: 15px;
+}
+.boton_personalizado{
+    text-decoration: none;
+	font-family: 'Leckerli One', cursive;
+    padding: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 30px;
+    color: #1883ba;
+    background-color: #0000;
+    border-radius: 5px;
+    border: 2px solid #015e75;
+  }
+  .boton_personalizado:hover{
+    background-color: #a9cfe2;
+  }
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+body::-webkit-scrollbar-thumb{
+    background: #10BCE3;
+    border-radius:5px;
+}
+body{
+    overflow-x: hidden;
+}
