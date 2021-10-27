@@ -16,20 +16,28 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
 
     coleccionFabula.forEach(doc =>{
         cuentosFab.innerHTML += `<div>
-            <img src=${doc.data().ImgUrl} height="200px">
-            <h1>${doc.data().TituloCuento}</h1>
-        </div>`
+            <img src=${doc.data().ImgUrl} height="200px"style="margin-bottom:10px ; margin-top: 10px">
+          
+            <form action="Fabulas.html" method="GET">
+             <input type="submit" id="btnTitulo" class="boton_personalizado2" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
+          </form>  
+          </div> `
     })
     coleccionClasicos.forEach(doc =>{
         cuentosClas.innerHTML += `<div>
-            <img src=${doc.data().ImgUrl} height="200px">
-            <h1>${doc.data().TituloCuento}</h1>
+            <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
+          
+            <form action="Clasicos.html" method="GET">
+             <input type="submit" id="btnTitulo" class="boton_personalizado2" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
+           </form>
         </div>`
     })
     coleccionFantasia.forEach(doc =>{
         cuentosFan.innerHTML += `<div>
-            <img src=${doc.data().ImgUrl} height="200px">
-            <h1>${doc.data().TituloCuento}</h1>
+            <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
+            <form action="Fantasia.html" method="GET">
+             <input type="submit" id="btnTitulo" class="boton_personalizado2" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
+           </form>
         </div>`
     })
 })

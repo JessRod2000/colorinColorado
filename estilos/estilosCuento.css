@@ -40,6 +40,9 @@ h3{
 	padding: 15px;
 }
 #titulo{
+	color: #07c898;
+  font-size:1.4cm;
+	font-family: 'Leckerli One', cursive;
 	text-align: center;
     margin: 10px;
 }

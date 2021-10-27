@@ -1,13 +1,5 @@
 header {
 	background-color: #3DD6AF;
-}
-h1{
-	color: #3DD6AF;
-	font-family: 'Leckerli One', cursive;
-} 
-h2{
-	font-family: 'Leckerli One', cursive;
-	
 } 
 .cabecera{
 	text-align: left;
@@ -28,6 +20,21 @@ h2{
     color: #1883ba;
     background-color: #ffffff;
   }
+  .boton_personalizado2{
+    text-decoration: none;
+    padding: 4px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #2b614f;
+    border-radius: 5px;
+    border: 2px solid #078061;
+  }
+  .boton_personalizado2:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
 #subtitulo{
 	padding-left: 20px;
 }
@@ -41,9 +48,15 @@ h2{
 	padding: 15px;
 }
 #titulo{
-	width: 70%;
-	float: left;
+  color: #3DD6AF;
+	font-family: 'Leckerli One', cursive;
+  text-align: center;
+  font-size: 1.3cm;
 }
+h2{
+	font-family: 'Leckerli One', cursive;
+	
+} 
 body::-webkit-scrollbar {
     width: 10px;
   }

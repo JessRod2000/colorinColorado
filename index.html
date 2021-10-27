@@ -21,19 +21,18 @@
    	
    </header>
 <hr>
-    <h1 align="center">Colorín Colorado</h1>
+<div align="center" id="titulo">
+  Colorín Colorado
+</div>
 
 <section>
-	<div class="class50" align="center" >
-         <a title="Cuentos cortos" href="cuentosCortos.html"><img src="iconos/cuentosCortos.png" height="250px" alt="cortitos" /></a>
-	<h1>Cuentos Cortos</h1>
-
-	</div>
-		<div class="class50" align="center">
-           <a title=" Cuentos largos" href="cuentosLargos.html"><img src="iconos/cuentosLargos.png" height="250px" alt="largos" /></a>
-		<h1>Cuentos Largos</h1>
-	</div>
-
+  <div align="center" style="padding-bottom: 30px; margin-top: 35px;">
+    <img src="iconos/cuentosCortos.png" height="250px" alt="cortitos" />
+    
+    <div align="center"style="padding-left: 35px; padding-top: 25px;">
+      <a class="boton_personalizado" href="CuentosCortos.html">Cuentos Cortos</a>
+    </div>
+  </div>
 </section>
    
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
@@ -59,16 +58,13 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-
-  <!-- CUSTOM CODE -->
-  <script src="index.js"></script>
 </body>
 <hr>
-<footer id="footer" align="center" style="padding: 30px;">
-	<div >
-<b>	Esperamos que tus pequeños se diviertan aprendiendo con nuestras lecturas y sus actividades. 
-Para Colorin Colorado el aprendizaje debe ser siempre una experiencia divertida que motive a los niños. Tal como lo dijo Francesco Tonucci, psicopedagogo italiano:
-"Todos los aprendizajes más importantes de la vida se hacen con Diversion" </b>
-</div>
+<footer>
+	<div  id="footer" align="center" style="padding-right:150px;padding-left: 150px ;margin-bottom: 20px; font-size: large;font-family: 'Delius', cursive;" >
+   <b>	Esperamos que tus pequeños se diviertan aprendiendo con nuestras lecturas y sus actividades. 
+    <br>Para Colorin Colorado el aprendizaje debe ser siempre una experiencia divertida que motive a los niños. Tal como lo dijo Francesco Tonucci, psicopedagogo italiano:
+       <br>"Todos los aprendizajes más importantes de la vida se hacen con Diversion" </b>
+   </div>
 </footer>
 </html>

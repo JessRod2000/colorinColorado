@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuento</title>
-    <title>Colorin Colorado</title>
+    <title>Fabulas</title>
 	<link rel="stylesheet" type="text/css" href="estilos/estilosCuento.css">
 	<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
@@ -17,7 +16,7 @@
 <body>
     <header>
         <div id="logo">
-            <a title="Cuentos cortos" href="Principal.html"><img src="iconos/logo1.4.png" height="80px" /></a>
+            <a title="Cuentos cortos" href="index.html"><img src="iconos/logo1.4.png" height="80px" /></a>
         </div>
     <div class="cabecera">
             <h2>Curso de Comprension de Lectura</h2>
@@ -29,10 +28,12 @@
     </div>
     
     <!--estos contenedores-->
-    <div id="cuento-container" align="center"></div>
-    <div id="cuento-texto" align="justify"></div>
+    <div id="cuento-titulo" class="titulo"></div>
+    <div align='center'>
+        <img id="myimg">
+    </div>
+    <div id="cuento-container"><p></p></div>
     <!--estos contenedores-->
-    
    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script> 
    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script> 
@@ -59,6 +60,6 @@
    </script>
  
    <!-- CUSTOM CODE -->
-   <script src="Cuento.js"></script> 
+   <script src="Fabulas.js"></script> 
 </body>
 </html>
