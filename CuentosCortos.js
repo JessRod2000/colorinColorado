@@ -23,6 +23,14 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
           </form>  
           </div> `
     })
+    coleccionFantasia.forEach(doc =>{
+        cuentosFan.innerHTML += `<div>
+            <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
+            <form action="Fantasia.html" method="GET">
+             <input type="submit" id="btnTitulo" class="boton_personalizado2" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
+           </form>
+        </div>`
+    })
     coleccionClasicos.forEach(doc =>{
         cuentosClas.innerHTML += `<div>
             <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
@@ -32,12 +40,5 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
            </form>
         </div>`
     })
-    coleccionFantasia.forEach(doc =>{
-        cuentosFan.innerHTML += `<div>
-            <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
-            <form action="Fantasia.html" method="GET">
-             <input type="submit" id="btnTitulo" class="boton_personalizado2" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
-           </form>
-        </div>`
-    })
+    
 })
