@@ -22,6 +22,7 @@ header {
   }
   .boton_personalizado2{
     text-decoration: none;
+    width:250px;
     padding: 4px;
     margin-top: 20px;
     font-weight: 600;
