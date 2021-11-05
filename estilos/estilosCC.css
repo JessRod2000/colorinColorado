@@ -1,70 +1,96 @@
-header {
-	background-color: #3DD6AF;
-} 
-.cabecera{
-	text-align: left;
-	padding-top: 30px;
-	padding-bottom: 40px;
+
+body{
+  overflow-x: hidden;
 }
-.boton_personalizado{
-    text-decoration: none;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #07c898;
-    border-radius: 6px;
-    border: 2px solid #078061;
-  }
-  .boton_personalizado:hover{
-    color: #1883ba;
-    background-color: #ffffff;
-  }
-  .boton_personalizado2{
-    text-decoration: none;
-    width:250px;
-    padding: 4px;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #2b614f;
-    border-radius: 5px;
-    border: 2px solid #078061;
-  }
-  .boton_personalizado2:hover{
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background: #07c898;
+  border-radius:5px;
+}
+#titulo{
+  color: #05926f;
+  font-size:1.7cm;
+  font-family: 'Rampart One', cursive;
+	text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.cabecera{
+  font-family: 'Arima Madurai', cursive;
+  text-align: left;
+  font-size: 0.65cm;
+  padding:1.8%;
+  min-width: 580px;
+  background-color: #07c898;
+}
+.boton_atras{
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #07c898;
+  border-radius: 6px;
+  border: 2px solid #078061;
+}
+.boton_atras:hover{
+  color: #1883ba;
+  background-color: #ffffff;
+}
+.boton_cuento{
+  width:250px;
+  font-family: 'Arima Madurai', cursive;
+  text-decoration: none;
+  padding: 4px;
+  margin-top: 2px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 0.53cm;
+  color: #ffffff;
+  background-color: #2b614f;
+  border-radius: 5px;
+	border: 2px solid #078061;
+   }
+  .boton_cuento:hover{
     color: #1883ba;
     background-color: #ffffff;
   }
 #subtitulo{
 	padding-left: 20px;
 }
-.class50{
-	width: 50%;
-	float: left;
+
+h1{
+  font-family: 'Arima Madurai', cursive;
 }
-#logo{
-	width: 10%;
-	float: left;
-	padding: 15px;
+
+.general{
+  min-width: 100%;
+  max-height: 100%;
+  margin-bottom: 15px;
 }
-#titulo{
-  color: #3DD6AF;
-	font-family: 'Leckerli One', cursive;
-  text-align: center;
-  font-size: 1.3cm;
-}
-h2{
-	font-family: 'Leckerli One', cursive;
-	
-} 
-body::-webkit-scrollbar {
-    width: 10px;
-  }
-  body::-webkit-scrollbar-thumb{
-    background: #07c898;
-    border-radius:5px;
-  }
+
+@media screen and (max-width: 580px) {
   body{
-    overflow-x: hidden;
+    margin-top: 4rem;
+  }
+  .header{
+    min-width: 100%;
+  }
+  .titulo{
+   font-size: 0.8cm;
+  }
+  .boton_atras{
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 3px;
  }
+ .cabecera{
+  font-size: 0.4cm;
+  }
+  #logo{
+  height: 60px;
+  }
+}
