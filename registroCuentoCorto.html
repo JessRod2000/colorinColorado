@@ -37,7 +37,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <form  id="formulario_registro" >
+                <section id="formulario_registro">
                     <label class="formulario_label" > Titulo  </label>  
                     <input type="text" id="titulobox" class="formulario_input" name="titulo"  >
                     
@@ -64,8 +64,9 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label class="formulario_label" id="label_imagen"> Imagen </label>
-                            <input class="sub" type="file" name="file" 
-                            accept=".png,.jpg,.jpeg" onchange="validarImagen(this);" />
+                            <div>
+                                <button class ="sub" id="elegirArchivo">Elegir archivo</button>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <img id="myimg"> <label id="UpProgress"></label> 
@@ -77,36 +78,33 @@
                             <button id="registrar" class="formulario_input">Registrar</button>
                         </div>
                     </div>
+                </section>
                     
-                   
-                </form>
             </div>
         </div>
     </section>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+  
     <script>
-        function validarImagen(obj){
-        var uploadFile = obj.files[0];
-    
-            var img = new Image();
-            img.onload = function () {
-                if (this.width.toFixed(0) !=10 && this.height.toFixed(0) !=10) {
-                    alert("es");
-                    console.log("debe ser 10");
-                    
-                }
-                else {
-                    
-                    alert("no es");
-                                  
-                }
-                
-            };
-            img.src = URL.createObjectURL(uploadFile);
-           
-        } 
-            
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+          apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+        authDomain: "colorin-colorado-f857f.firebaseapp.com",
+        databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+        projectId: "colorin-colorado-f857f",
+        storageBucket: "colorin-colorado-f857f.appspot.com",
+        messagingSenderId: "31331535773",
+        appId: "1:31331535773:web:55d57a73caeb602085bd74",
+        measurementId: "G-37YPHDXTPN"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
     </script>
-     
+  
+    <!-- CUSTOM CODE -->
+    <script src="registroCuentoCorto.js"></script> 
 </body>
 
 </html>
