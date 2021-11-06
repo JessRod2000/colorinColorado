@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+* {
+    margin:0;
+}
+.mod_body {
+    margin:0;
+    padding-top:0px;
+    font-family: 'Arima Madurai', cursive;;
+	
+}
+#formulario_registro{
+    width: 600px;
+    font-size: 16pt;
+    max-width: 100%;
+    margin:auto;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.2);
+    border-radius:8px;
+}
+#label_imagen{
+    padding-bottom:80px;
+    padding-top:15px;
+}
+#contenido_label{
+    margin-top:10px;
+}
+.formulario_input{
+    margin-top:5px;
+    margin-bottom:5px;
+    border-radius:8px;
+}
+#titulobox{
+    margin-top:0px;
+    margin-left:86px;
+    width:300px;
+}
+#categorias{
+    margin-left:48px;
+    border-radius:8px;
+    font-size:14pt;
+}
+.sub{
+    font-size:8pt;
+}
