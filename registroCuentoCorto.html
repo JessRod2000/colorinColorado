@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     
-</body>
+    <style>
+        body{
+            background-color: aqua;
+         }
+        #container{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+    <body>
+        <section>
+            <div class= "container"> 
+                <img scr="" alt=""> 
+           </div>
+        </section>
+    </body>
+    <main>
+        <div class="container">
+            <section id="Images" class="images-cards">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-12" id="add-photo-container">
+                            <div class="add-new-photo first" id="add-photo">
+                                <span><i class="icon-camera"></i></span>
+                            </div>
+                            <input type="file" multiple id="add-new-photo" name="images[]">
+                        </div>
+                    </div>
+                </form> 
+            </section>
+        </div>
+    </main>
 </html>
