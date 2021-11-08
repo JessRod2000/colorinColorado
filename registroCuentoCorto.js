@@ -4,6 +4,7 @@ const dbfirestore = firebase.firestore();
 var ImgName, ImgUrl, Categoria, TituloCuento, ContenidoCuento;
 var files = [];
 var reader;
+let inputs = document.querySelectorAll('input');
 //-----------para abrir el explorador de archivo-------------
 document.getElementById("elegirArchivo").onclick = function(e){
     var input = document.createElement('input');
@@ -39,6 +40,9 @@ document.getElementById('registrar').onclick = function(){
             ImgUrl = url;
             const response = dbfirestore.collection(Categoria).doc().set({TituloCuento,ContenidoCuento,ImgUrl});
             alert('Cuento registrado');
+            document.getElementById('titulobox').value ='';
+            document.getElementById('contenidobox').value = '';
+            document.getElementById("myimg").src = '';
         }
     );
 });
