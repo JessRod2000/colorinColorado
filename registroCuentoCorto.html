@@ -3,10 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registro cuento corto</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilosPrin.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilosRegCC.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilosCC.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+  
+    <!-- BOOTSWATCH -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
-<body>
+<body class="mod_body">
+    <div class="general">
+        <header>
+            <div class="cabecera">
+                <a title="Cuentos cortos" href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                Curso de Lectura de Comprensión
+                <a class="boton_cerrar_sesion" href="index.html">Cerrar sesión</a>
+            </div>
+        </header>
+        <div style="padding-left: 35px; padding-top: 25px;">
+            <a class="boton_atras" href="indexSesionIniciada.html">Atrás</a>
+            
+           </div>
+    </div>   
+     <hr>
+
+     <div align="center" id="titulo"> Registrar Cuento Corto</div>
+     
+     <section>
+        <style>
+            #myimg{height: 160px;
+            width: 160px;
+            border: 2px solid black;
+            margin-top:15px;
+            }
+        </style>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form  id="formulario_registro" >
+                    <label class="formulario_label" > Titulo  </label>  
+                    <input type="text" id="titulobox" class="formulario_input" name="titulo"  >
+                    
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="formulario_label" id="contenido_label"> Contenido  </label>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea id="contenidobox" class="formulario_input"name="contenido" 
+                    rows="3" cols="35"></textarea>
+                        </div>
+                    </div>
+                    
+                    
+       
+                    <label class="formulario_label"> Categoria  </label>
+                    <select name="combobox" id="categorias">
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Fabulas">Fabulas</option>
+                        <option value="Clasicos">Clasicos</option>
+                    </select> <br>
+
+                   
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="formulario_label" id="label_imagen"> Imagen </label>
+                            <input class="sub" type="file" name="file" 
+                            accept=".png,.jpg,.jpeg" onchange="validarImagen(this);" />
+                        </div>
+                        <div class="col-md-3">
+                            <img id="myimg"> <label id="UpProgress"></label> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5"></div>
+                        <div class="col-md-6">
+                            <button id="registrar" class="formulario_input">Registrar</button>
+                        </div>
+                    </div>
+                    
+                   
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        function validarImagen(obj){
+        var uploadFile = obj.files[0];
     
+            var img = new Image();
+            img.onload = function () {
+                if (this.width.toFixed(0) !=10 && this.height.toFixed(0) !=10) {
+                    alert("es");
+                    console.log("debe ser 10");
+                    
+                }
+                else {
+                    
+                    alert("no es");
+                                  
+                }
+                
+            };
+            img.src = URL.createObjectURL(uploadFile);
+           
+        } 
+            
+    </script>
+     
 </body>
+
 </html>
