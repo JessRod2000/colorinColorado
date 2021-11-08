@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
         tmp=queryString.split('=');
         $_GET[tmp[1]]=unescape(tmp[1].split('+').join(' '));
         $_GET[tmp[0]]=unescape(tmp[0]);
-        $_GET[tmp[1]]=$_GET[tmp[1]].replace("	Ã¡","á");
+        $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã¡","á");
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã©","é");
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã­","í");
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã³","ó");
@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
               </div>`
               recuperar($_GET[tmp[0]]);
               cuentoContainer.innerHTML += `<div id="contenido">
-               <h3><p>${doc.data().ContenidoCuento}</p></h3>
+                 <p>${doc.data().ContenidoCuento}</p>
               </div>`
           }
       })

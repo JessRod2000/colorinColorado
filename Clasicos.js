@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
               </div>`
               recuperar($_GET[tmp[0]]);
               cuentoContainer.innerHTML += `<div id="contenido">
-               <h3><p>${doc.data().ContenidoCuento}</p></h3>
+                 <p>${doc.data().ContenidoCuento}</p>
               </div>`
           }
       })

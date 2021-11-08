@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
     const coleccionFabula = await getCuentosFabula();
     const coleccionClasicos = await getCuentosClasicos();
     const coleccionFantasia = await getCuentosFantasia();
+
     coleccionFabula.forEach(doc =>{
         cuentosFab.innerHTML += `<div>
             <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
@@ -46,5 +47,4 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
 
         `
     })
-    
 })
