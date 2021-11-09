@@ -23,57 +23,75 @@
         </header>
         <div style="padding-left: 35px; padding-top: 25px;">
             <a class="boton_atras" href="index.html">Atrás</a>
-    </div>   
-    
-    <div class="contenedor">
+    </div>  
+    <div class="contenedor" style="margin-top:50px;">
+        <form id="formulario_registro">
         <div class="titulo">Registrar Cuento Corto</div>
-        <div style="margin: 10px;">
-        <div id="contraseña">
-            Titulo:
-        </div>
-        <div class="input-contenedor">
-            <input type="text" id="titulobox"  name="titulo">
-            </div>
-        </div>
 
-        <div class="row" style="margin: 10px;">
-            <div class="col-md-3">
-                <div id="contraseña">
-                    Contenido: 
+        <div class="row"style="margin: 8px;">
+
+            <div class="col-md-3" id="etiquetas">
+                <div >Titulo:</div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor" >
+                    <input type="text" id="titulobox"  name="titulo" size="48">
                 </div>
             </div>
-            <div class="col-md-6">
-                <textarea id="contenidobox" class="formulario_input"name="contenido" 
-                rows="3" cols="35"></textarea>
+        </div>
+
+        <div class="row"style="margin: 8px;">
+
+            <div class="col-md-3" id="etiquetas">
+                <div>Categoria: </div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor">
+                    
+                    <select  name="combobox" id="categorias" class="formulario_input">
+                        <option value="Fabulas">Fabulas</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Clasicos">Clasicos</option>
+                    </select>
+                </div>
             </div>
         </div>
-        <div style="margin: 10px;">
-            <div id="contraseña">
-            Categoria: 
-            </div>
-            <div class="input-contenedor">
-                <select name="combobox" id="categorias" class="formulario_input">
-                    <option value="Fantasia">Fantasia</option>
-                    <option value="Fabulas">Fabulas</option>
-                    <option value="Clasicos">Clasicos</option>
-                </select>
 
-        </div> 
-        <div style="margin: 10px;">
-            <div id="contraseña">
-            Imagen: 
+        <div class="row" style="margin:8px;">
+            <div class="col-md-3" id="etiquetas">
+                <div >Contenido: </div>
             </div>
-            <div class="input-contenedor">
-                <input class="elegir-archivo" type="file" name="file" 
+            <div class="col-md-7">
+                <div class="input-contenedor">
+                    <textarea id="contenidobox" class="formulario_input"name="contenido" 
+                rows="4" cols="50"></textarea>
+                </div>
+                
+            </div>
+        </div>
+
+    
+        <div class="row" style="margin: 8px;">
+
+            <div class="col-md-3" id="etiquetas">
+                <div >Imagen:</div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor" >
+                    <input class="elegir-archivo" type="file" name="file" 
                 accept=".png,.jpg,.jpeg" id="elegirArchivo"/>
+                </div>
+            </div>
+        </div>
+           
 
-        </div> 
-        
         <div align ="center">
             <input type="submit" id="registrar" class="button" value="Registrar">
         </div>
+    </form>
+    </div>
+    </div>
 
-<!--
     
     </section>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
