@@ -3,10 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registro cuento corto</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilosPrin.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilosRegCC.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilosCC.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+  
+    <!-- BOOTSWATCH -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
-<body>
+<body class="mod_body">
+    <div class="general">
+        <header>
+            <div class="cabecera">
+                <a title="Cuentos cortos" href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                Curso de Lectura de Comprensión
+                <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()" >Cerrar Sesion</button>
+            </div>
+        </header>
+        <div style="padding-left: 35px; padding-top: 25px;">
+            <a class="boton_atras" href="administrarContenido.html">Atrás</a>
+            
+           </div>
+    </div>   
+     <hr>
+
+     <div align="center" id="titulo"> Registrar Cuento Corto</div>
+     
+     <section>
+        <style>
+            #myimg{height: 160px;
+            width: 160px;
+            border: 2px solid black;
+            margin-top:15px;
+            }
+        </style>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form  id="formulario_registro" >
+                    <label class="formulario_label" > Titulo  </label>  
+                    <input type="text" id="titulobox" class="formulario_input" name="titulo" onkeydown="validacion()" >
+                    <span id="text1"></span>
+                    
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="formulario_label" id="contenido_label"> Contenido  </label>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea id="contenidobox" class="formulario_input" name="contenido" 
+                    rows="3" cols="35" onclick="contarPalabras()"></textarea>
+                        </div>
+                    </div>
+                    
+                    
+       
+                    <label class="formulario_label"> Categoria  </label>
+                    <select name="combobox" id="categorias">
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Fabulas">Fabulas</option>
+                        <option value="Clasicos">Clasicos</option>
+                    </select> <br>
+
+                   
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="formulario_label" id="label_imagen"> Imagen </label>
+                            <input class="sub" type="file" name="file" 
+                            accept=".png,.jpg,.jpeg" onchange="validarImagen(this);" />
+                        </div>
+                        <div class="col-md-3">
+                            <img id="myimg"> <label id="UpProgress"></label> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5"></div>
+                        <div class="col-md-6">
+                            <button id="registrar" class="formulario_input" >Registrar</button>
+                        </div>
+                    </div>
+                    
+                   
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type ="text/javascript">
+        function validacion(){
+            var form = document.getElementById("formulario_registro");
+            var titulobox = document.getElementById("titulobox").value;
+            var text1 = document.getElementById("text1");
+            var pattern = /^[A-Za-z\d\s\u003f\u00bf\u0021\u00a1]+$/;
+            
+            
+            if(titulobox.match(pattern)){
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text1.innerHTML = "EL TITULO ES VALIDO!!!!";
+                text1.style.color = "#00ff00";
+                
+            }
+            
+            else{
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                text1.innerHTML = "POR FAVOR INGRESE UN TITULO VALIDO!!!!";
+                text1.style.color = "#ff0000";
+
+            }
+            if(titulobox == ""){
+                form.classList.remove("valid");
+                form.classList.remove("invalid");
+                text1.innerHTML = "";
+                text1.style.color = "#00ff00";
+            }
+        
+        }
+        /*function pulsar(){
+            if(validation()){
+                alert("DATOS INGRESADOS CORRECTAMENTE");
+            }else{
+                alert("faltan datos");
+            }
+        }*/
+
+    </script>
+    <script>
+        function contarPalabras(){
+            
+            var texto = document.getElementById("contenidobox").value;
+            
+            /*texto = texto.replace (/\r?\n/g," ");
+            texto = texto.replace (/[ ]+/g," ");
+            texto = texto.replace (/^ /,"");
+            texto = texto.replace (/ $/,"");*/
+            
+            var textoTroceado = texto.split (" ").length;
+            //var numeroPalabras = textoTroceado.length;
+            //alert(numeroPalabras);
+            
+            if(textoTroceado > 5){     
+                    alert("hay "+ textoTroceado +" palabras");
+            }
+        }
+         
+        //Llamamos a la función para que cuente las palabras
+        contarPalabras();
+    </script>
+    <script>
+        function validarImagen(obj){
+        var uploadFile = obj.files[0];
     
+            var img = new Image();
+            img.onload = function () {
+                if (this.width.toFixed(0) !=10 && this.height.toFixed(0) !=10) {
+                    alert("es");
+                    console.log("debe ser 10");
+                    
+                }
+                else {
+                    
+                    alert("no es");
+                                  
+                }
+                
+            };
+            img.src = URL.createObjectURL(uploadFile);
+           
+        } 
+            
+    </script>
+     <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+        import {
+          getAuth,
+          signInWithEmailAndPassword,
+          signOut,
+        } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+          authDomain: "colorin-colorado-f857f.firebaseapp.com",
+          databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+          projectId: "colorin-colorado-f857f",
+          storageBucket: "colorin-colorado-f857f.appspot.com",
+          messagingSenderId: "31331535773",
+          appId: "1:31331535773:web:55d57a73caeb602085bd74",
+          measurementId: "G-37YPHDXTPN"
+        };
+        const añadir = document.getElementById("añadir");
+        const logoutButton = document.getElementById("logoutButton");
+        const usuario = localStorage.getItem("datosUsuario");
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        function logout() {
+          const auth = getAuth();
+          signOut(auth)
+            .then(() => {
+              localStorage.removeItem('datosUsuario');
+              const usuario = localStorage.getItem("datosUsuario");
+              window.location.href='index.html' ;
+              console.log('funciono')
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        }
+        window.logout = logout;
+      </script> 
 </body>
+
 </html>
