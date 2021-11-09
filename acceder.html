@@ -76,6 +76,9 @@
       function login() {
         const correo = document.getElementById("email").value;
         const contraseña = document.getElementById("password").value;
+        if (correo === ''|| contraseña === ''){
+          alert('El campo de Correo y Contraseña son obligatorios')
+        } else {}
         console.log(correo);
         console.log(contraseña);
         const auth = getAuth();
@@ -92,7 +95,6 @@
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            
           });
         console.log("probando");
       }
