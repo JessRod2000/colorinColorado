@@ -10,7 +10,6 @@
   text-align: left;
   font-size: 0.65cm;
   padding:1.8%;
-  min-width: 580px;
   background-color: #10BCE3;
 }
 .boton_personalizado{
@@ -53,10 +52,7 @@ body::-webkit-scrollbar-thumb{
 body{
     overflow-x: hidden;
 }
-@media screen and (max-width: 580px) {
-  body{
-    margin-top: 4rem;
-  }
+@media screen and (max-width: 600px) {
   .cabecera{
     font-size: 0.4cm;
   }
