@@ -29,7 +29,6 @@ body{
       text-align: left;
       font-size: 0.65cm;
       padding:1.8%;
-      min-width: 580px;
       background-color: #0aa9da;
     }
   .titulo{
@@ -103,7 +102,7 @@ input[type="submit"]{
     display: inline-block;
     padding-left:14%;
 }
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 600px) {
     .contenedor{
         width: 88%;
         margin-left: 3%;
