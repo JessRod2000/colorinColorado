@@ -21,65 +21,60 @@
                 Curso de Lectura de Comprensión
             </div>
         </header>
+        <div style="padding-left: 35px; padding-top: 25px;">
+            <a class="boton_atras" href="index.html">Atrás</a>
     </div>   
-     <hr>
-
-     <div align="center" id="titulo"> Registrar Cuento Corto</div>
-     
-     <section>
-        <style>
-            #myimg{height: 160px;
-            width: 160px;
-            border: 2px solid black;
-            margin-top:15px;
-            }
-        </style>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <form id="formulario_registro">
-                    <label class="formulario_label" > Titulo  </label>  
-                    <input type="text" id="titulobox" class="formulario_input" name="titulo"  >
-                    
-                    <div class="row">
-                        <div class="col-md-3">
-                            <label class="formulario_label" id="contenido_label"> Contenido  </label>
-                        </div>
-                        <div class="col-md-6">
-                            <textarea id="contenidobox" class="formulario_input"name="contenido" 
-                    rows="3" cols="35"></textarea>
-                        </div>
-                    </div>
-                    
-                    
-       
-                    <label class="formulario_label"> Categoria  </label>
-                    <select name="combobox" id="categorias">
-                        <option value="Fantasia">Fantasia</option>
-                        <option value="Fabulas">Fabulas</option>
-                        <option value="Clasicos">Clasicos</option>
-                    </select> <br>
-
-                   
-                    <div class="row">
-                        <div class="col-md-3">
-                            <label class="formulario_label" id="label_imagen"> Imagen </label>
-                        </div>
-                        <div class="col-md-6">
-                            <input class="sub" type="file" name="file" 
-                            accept=".png,.jpg,.jpeg" id="elegirArchivo"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-6">
-                            <input type="submit" id="registrar" class="formulario_input" value="Registrar">
-                        </div>
-                    </div>
-                </form>
-                    
+    
+    <div class="contenedor">
+        <div class="titulo">Registrar Cuento Corto</div>
+        <div style="margin: 10px;">
+        <div id="contraseña">
+            Titulo:
+        </div>
+        <div class="input-contenedor">
+            <input type="text" id="titulobox"  name="titulo">
             </div>
         </div>
+
+        <div class="row" style="margin: 10px;">
+            <div class="col-md-3">
+                <div id="contraseña">
+                    Contenido: 
+                </div>
+            </div>
+            <div class="col-md-6">
+                <textarea id="contenidobox" class="formulario_input"name="contenido" 
+                rows="3" cols="35"></textarea>
+            </div>
+        </div>
+        <div style="margin: 10px;">
+            <div id="contraseña">
+            Categoria: 
+            </div>
+            <div class="input-contenedor">
+                <select name="combobox" id="categorias" class="formulario_input">
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Fabulas">Fabulas</option>
+                    <option value="Clasicos">Clasicos</option>
+                </select>
+
+        </div> 
+        <div style="margin: 10px;">
+            <div id="contraseña">
+            Imagen: 
+            </div>
+            <div class="input-contenedor">
+                <input class="elegir-archivo" type="file" name="file" 
+                accept=".png,.jpg,.jpeg" id="elegirArchivo"/>
+
+        </div> 
+        
+        <div align ="center">
+            <input type="submit" id="registrar" class="button" value="Registrar">
+        </div>
+
+<!--
+    
     </section>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
