@@ -37,7 +37,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <section id="formulario_registro">
+                <form id="formulario_registro">
                     <label class="formulario_label" > Titulo  </label>  
                     <input type="text" id="titulobox" class="formulario_input" name="titulo"  >
                     
@@ -62,23 +62,21 @@
 
                    
                     <div class="row">
-                        <div class="col-md-6">
-                            <label class="formulario_label" id="label_imagen"> Imagen </label>
-                            <div>
-                                <button class ="sub" id="elegirArchivo">Elegir archivo</button>
-                            </div>
-                        </div>
                         <div class="col-md-3">
-                            <img id="myimg">
+                            <label class="formulario_label" id="label_imagen"> Imagen </label>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="sub" type="file" name="file" 
+                            accept=".png,.jpg,.jpeg" id="elegirArchivo"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-5"></div>
                         <div class="col-md-6">
-                            <button id="registrar" class="formulario_input">Registrar</button>
+                            <input type="submit" id="registrar" class="formulario_input" value="Registrar">
                         </div>
                     </div>
-                </section>
+                </form>
                     
             </div>
         </div>
