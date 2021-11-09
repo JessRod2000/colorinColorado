@@ -83,7 +83,7 @@ body{
     font-size:1.3cm;
     font-family: 'Rampart One', cursive;
       text-align: center;
-    margin: 10px;
+    margin: 1px;
   }
     .general{
     min-width: 100%;
@@ -102,7 +102,7 @@ body{
     padding: 25px;
 }
 input[type="text"]{
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     border: 2px solid #000;
     border-radius: 8px;
@@ -111,7 +111,7 @@ input[type="submit"]{
     width: 30%;
 }
 .formulario_input{
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     border: 2px solid #000;
     border-radius: 8px;
@@ -137,13 +137,13 @@ input[type="submit"]{
     background-color: #1d9fc7;
 }
 
-#correo{
+#correo{ /*nombre de los campos*/
     color: #045d5d;
     font-size:0.65cm;
     font-family: 'Arima Madurai', cursive;
     text-align: left;
     margin: 10px;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 #contraseña{
     color: #045d5d;
@@ -152,7 +152,7 @@ input[type="submit"]{
     text-align: left;
     margin: 10px;
     display: inline-block;
-    padding-left:14%;
+    padding-left: 14%;
 }
   @media screen and (max-width: 580px) {
     .contenedor{
