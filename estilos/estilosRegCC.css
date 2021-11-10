@@ -1,61 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-#text1{
-  color: #cf2c2c;
-  font-size: 0.4cm;
-}
-#text2{
-  color: #cf2c2c;
-  font-size: 0.4cm;
-}
-#text3{
-  color: #cf2c2c;
-  font-size: 0.4cm;
-}
-/*{
-    margin:0;
-}
-.mod_body {
-    margin:0;
-    padding-top:0px;
-    font-family: 'Arima Madurai', cursive;;
-	
-}
-#formulario_registro{
-    width: 600px;
-    font-size: 16pt;
-    max-width: 100%;
-    margin:auto;
-    padding:20px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 20px 1px rgba(0,0,0,0. 2);
-    border-radius:8px;
-}
-#label_imagen{
-    padding-bottom:80px;
-    padding-top:15px;
-}
-#contenido_label{
-    margin-top:10px;
-}
-.formulario_input{
-    margin-top:5px;
-    margin-bottom:5px;
-    border-radius:8px;
-}
-#titulobox{
-    margin-top:0px;
-    margin-left:86px;
-    width:300px;
-}
-#categorias{
-    margin-left:48px;
-    border-radius:8px;
-    font-size:14pt;
-}
-.sub{
-    font-size:8pt;
-}*/
+
 body{
     overflow-x: hidden;
   }
@@ -86,7 +29,6 @@ body{
       text-align: left;
       font-size: 0.65cm;
       padding:1.8%;
-      min-width: 580px;
       background-color: #0aa9da;
     }
   .titulo{
@@ -106,11 +48,11 @@ body{
   .contenedor{
     width: 50%;
     margin-left: 26%;
-    margin-right: 25%;
-    margin-top: 4%;
+    margin-right: 26%;
+    margin-top: 2%;
     border-radius: 8px;
     border: 3px solid #1799c0;
-    padding: 25px;
+    padding: 20px;
 }
 input[type="text"]{
     font-size: 15px;
@@ -131,10 +73,12 @@ input[type="submit"]{
 .input-contenedor{ /*reemplazado por los class="row"*/
     margin-bottom: 15px;
     display: inline;
+    width: 100%;
 }
+
 .button{
     border: 2px solid #036666;
-    width: 100%;
+    width: 80%;
     font-size: 20px;
     padding: 8px;
     margin:8px;
@@ -169,20 +113,56 @@ input[type="submit"]{
   font-family: 'Arima Madurai', cursive;
   color: #045d5d;
 }
+input.elegir-archivo{
+  border-radius: 4px;
+ }
+ .input-contenedor #titulobox{ 
+  width: 100%;
+}
+.input-contenedor #contenidobox{ 
+  width: 100%;
+  margin-left: 3px;
+}
+.input-contenedor .elegir-archivo{ 
+  width: 100%;
+}
 
-  @media screen and (max-width: 580px) {
+#botonCerr{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
+
+.textoHeader{
+  display: inline-block;
+}
+
+@media screen and (max-width:990px){
+  .textoHeader{
+    display: none;
+  }
+}
+
+  @media screen and (max-width: 900px) {
+    input[type="text"]{
+     font-size: 0.4cm;
+     padding: 5px;
+     width: 100%;
+  }
+  input[type="submit"]{
+  font-size: 0.45cm;
+  padding: 5px;
+  margin-left: 3.5%;
+  }
     .contenedor{
         width: 88%;
-        margin-left: 3%;
-    margin-right: 2%;
+        margin-left: 5%;
+    margin-right: 3%;
     margin-top: 4.5%;
     border-radius: 8px;
     border: 3px solid #1799c0;
-    padding: 12px;
+    padding: 8px;
        }
-    body{
-      margin-top: 4rem;
-    }
     .header{
       min-width: 100%;
     }
@@ -198,7 +178,13 @@ input[type="submit"]{
    .cabecera{
     font-size: 0.4cm;
     }
+    #campos{
+      font-size: 20px;
+    }
+    #categorias{
+      font-size:13pt;
+      font-family: 'Arima Madurai', cursive;
+      color: #045d5d;
+    }
+    
   }
-  input.elegir-archivo{
- border-radius: 4px;
-}

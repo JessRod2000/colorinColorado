@@ -20,7 +20,6 @@ font-family: 'Arima Madurai', cursive;
 text-align: left;
 font-size: 0.65cm;
 padding:1.8%;
-min-width: 580px;
 background-color: #10BCE3;
 }
 .boton_personalizado{
@@ -38,38 +37,38 @@ background-color: #10BCE3;
 .boton_personalizado:hover{
   background-color: #a9cfe2;
 }
+
+#botonesAdmin-Cerr{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
 .boton_cerrar_sesion{
+  display: inline-block;
   text-decoration: none;
   font-family: 'Arima Madurai', cursive;
   padding: 3px;
-  margin-top: 20px;
   font-weight: 600;
   font-size: 25px;
   color: #08374e;
   background-color: #0000;
   border-radius: 5px;
   border: 2px solid #08374e;
-  position:absolute;
-  top:20px;
-  right:10px;
 }
 .boton_cerrar_sesion:hover{
   background-color: #a9cfe2;
 }
 .boton_administrar{
+  display: inline-block;
   text-decoration: none;
   font-family: 'Arima Madurai', cursive;
   padding: 3px;
-  margin-top: 20px;
   font-weight: 600;
   font-size: 25px;
   color: #08374e;
   background-color: #0000;
   border-radius: 5px;
   border: 2px solid #08374e;
-  position:absolute;
-  top:20px;
-  right:200px;
 }
 .boton_administrar:hover{
   background-color: #a9cfe2;
@@ -89,15 +88,23 @@ background-color: #10BCE3;
   min-width: 100%;
   max-height: 100%;
 }
-@media screen and (max-width: 580px) {
-  body{
-    margin-top: 4rem;
+.textoHeader{
+  display: inline-block;
+}
+@media screen and (max-width:990px){
+  .textoHeader{
+    display: none;
   }
+}
+@media screen and (max-width: 600px) {
   .cabecera{
     font-size: 0.4cm;
   }
   #logo{
     height: 60px;
+  }
+  .logoEsp{
+    width: 30%;
   }
   #titulo{
     font-size: 0.8cm;
@@ -113,4 +120,21 @@ background-color: #10BCE3;
     padding-left: 3%;
     padding-right: 3%;
   }
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .boton_administrar{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+ 
 }

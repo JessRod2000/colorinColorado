@@ -22,7 +22,6 @@ body::-webkit-scrollbar-thumb{
   text-align: left;
   font-size: 0.65cm;
   padding:1.8%;
-  min-width: 580px;
   background-color: #07c898;
 }
 .boton_atras{
@@ -57,29 +56,20 @@ body::-webkit-scrollbar-thumb{
 	border: 2px solid #31e6b8;
 }
 .boton_categoria:hover{
-  color: #1883ba;
-  background-color: #ffffff;
-  border: 2px solid #078061;
-}
-.boton_categoria:visited{
-  color: #1883ba;
-  background-color: #000000;
-  border: 2px solid #078061;
+  color: #ffffff;;
+  border: 2px solid #ffffff;
 }
 .boton_cerrar_sesion{
+  display: inline-block;
   text-decoration: none;
   font-family: 'Arima Madurai', cursive;
   padding: 3px;
-  margin-top: 20px;
   font-weight: 600;
   font-size: 25px;
   color: #08374e;
   background-color: #0000;
   border-radius: 5px;
   border: 2px solid #08374e;
-  position:absolute;
-  top:20px;
-  right:10px;
 }
 .boton_cerrar_sesion:hover{
   background-color: #a9cfe2;
@@ -116,13 +106,37 @@ h1{
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 580px) {
-  body{
-    margin-top: 4rem;
+.boton_registro{
+  text-decoration: none;
+font-family: 'Rampart One', cursive;
+  padding: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 40px;
+  color: #078061;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #078061;
+}
+
+.boton_registro:hover{
+  background-color: #a9cfe2;
+}
+#botonCerr{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
+
+.textoHeader{
+  display: inline-block;
+}
+@media screen and (max-width:990px){
+  .textoHeader{
+    display: none;
   }
-  .header{
-    min-width: 100%;
-  }
+}
+@media screen and (max-width: 610px) {
   .titulo{
    font-size: 0.8cm;
   }
@@ -136,5 +150,10 @@ h1{
   }
   #logo{
   height: 60px;
+  }
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
   }
 }

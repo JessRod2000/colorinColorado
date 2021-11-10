@@ -12,6 +12,8 @@ const btnFabulas = document.getElementById("Fabulas");
 const btnFantasia = document.getElementById("Fantasia");
 const btnClasicos = document.getElementById("Clasicos");
 
+const btnElegido = document.getElementById("");
+
 document.getElementById("Fabulas").onclick = async(e) =>{
     const coleccionFabula = await getCuentosFabula();
     var numActual=1;

@@ -24,15 +24,15 @@
         </header>
         <div style="padding-left: 35px; padding-top: 25px;">
             <a class="boton_atras" href="administrarContenido.html">Atrás</a>
-    </div>  
-    <div class="contenedor" style="margin-top:50px;">
+       </div>  
+    <div class="contenedor">
         <form id="formulario_registro">
         <div class="titulo">Registrar Cuento Corto</div>
 
         <div class="row"style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div >Titulo:</div>
+                <div id="campos" >Titulo:</div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
@@ -48,7 +48,7 @@
         <div class="row"style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div>Categoria: </div>
+                <div id="campos">Categoria: </div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
@@ -64,7 +64,7 @@
 
         <div class="row" style="margin:8px;">
             <div class="col-md-3" id="etiquetas">
-                <div >Contenido: </div>
+                <div id="campos">Contenido: </div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
@@ -80,11 +80,11 @@
         <div class="row" style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div >Imagen:</div>
+                <div id="campos">Imagen:</div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
-                    <input class="elegir-archivo" type="file" name="file" 
+                    <input class="elegir-archivo" type="file" name="file"
                accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" required/>
                 </div>
             </div>
