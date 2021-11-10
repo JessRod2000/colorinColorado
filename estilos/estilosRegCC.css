@@ -142,7 +142,6 @@ input.elegir-archivo{
     display: none;
   }
 }
-
   @media screen and (max-width: 900px) {
     input[type="text"]{
      font-size: 0.4cm;
