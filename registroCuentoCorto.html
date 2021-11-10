@@ -3,10 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registro cuento corto</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilosPrin.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilosRegCC.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+  
+    <!-- BOOTSWATCH -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="mod_body">
+    <div class="general">
+        <header>
+            <div class="cabecera">
+                <a title="Cuentos cortos" href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                Curso de Lectura de Comprensión
+            </div>
+        </header>
+        <div style="padding-left: 35px; padding-top: 25px;">
+            <a class="boton_atras" href="index.html">Atrás</a>
+    </div>  
+    <div class="contenedor" style="margin-top:50px;">
+        <form id="formulario_registro">
+        <div class="titulo">Registrar Cuento Corto</div>
+
+        <div class="row"style="margin: 8px;">
+
+            <div class="col-md-3" id="etiquetas">
+                <div >Titulo:</div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor" >
+                    <input type="text" id="titulobox"  name="titulo" size="48" required onkeydown="validacion()">
+                </div>
+                <div>
+                    <span id="text1"></span>
+                    <span id="text2"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"style="margin: 8px;">
+
+            <div class="col-md-3" id="etiquetas">
+                <div>Categoria: </div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor">
+                    
+                    <select  name="combobox" id="categorias" class="formulario_input">
+                        <option value="Fabulas">Fabulas</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Clasicos">Clasicos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin:8px;">
+            <div class="col-md-3" id="etiquetas">
+                <div >Contenido: </div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor">
+                    <textarea id="contenidobox" class="formulario_input"name="contenido" 
+                rows="4" cols="50" required></textarea>
+                <span id="text3"></span>
+                </div>
+                
+            </div>
+        </div>
+
     
+        <div class="row" style="margin: 8px;">
+
+            <div class="col-md-3" id="etiquetas">
+                <div >Imagen:</div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor" >
+                    <input class="elegir-archivo" type="file" name="file" 
+               accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" required/>
+                </div>
+            </div>
+        </div>
+           
+
+        <div align ="center">
+            <input type="submit" class="button" value="Registrar">
+        </div>
+    </form>
+    </div>
+    </div>
+
+    
+    </section>
+
+    <script>
+    function validateimg(ctrl) { 
+        var fileUpload = ctrl;
+            if (typeof (fileUpload.files) != "undefined") {
+                var reader = new FileReader();
+                reader.readAsDataURL(fileUpload.files[0]);
+                reader.onload = function (e) {
+                    var image = new Image();
+                    image.src = e.target.result;
+                    image.onload = function () {
+                        var height = this.height;
+                        var width = this.width;
+                        if ((height - width) >=10 || (width - height) >=10)  {
+                            alert("Imagen no valido, Alto y Ancho distintos en valor ");
+                            var inputImage = document.getElementById("elegirArchivo");
+                            inputImage.value = '';
+                            return false;
+                        }else{
+                            alert("Imagen cargada, Alto y Ancho validos");
+                            return true;
+                        }
+                    };
+                }
+            } else {
+                alert("This browser does not support HTML5.");
+                return false;
+            }
+    }
+    </script>
+
+<script type ="text/javascript">
+    function validacion(){
+        var form = document.getElementById("formulario_registro");
+        var titulobox = document.getElementById("titulobox").value;
+        var text1 = document.getElementById("text1");
+        var pattern = /^[A-Za-z\d\s\u00fc\u003f\u00bf\u0021\u00a1\u00f1\u00dc\u002c\u00b4\u00c1\u00e1\u00c9\u00e9\u00cd\u00ed\u00d3\u00f3\u00da\u00fa]+$/;
+        
+        
+        if(titulobox.match(pattern)){
+            form.classList.add("valid");
+            form.classList.remove("invalid");
+            text1.innerHTML = "";
+        }
+        
+        else{
+            form.classList.remove("valid");
+            form.classList.add("invalid");
+            text1.innerHTML = "Por favor ingrese un titulo válido!";
+
+        }
+        if(titulobox == ""){
+            form.classList.remove("valid");
+            form.classList.remove("invalid");
+            text1.innerHTML = "";
+        }
+    
+    }
+</script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+  
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+          apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+        authDomain: "colorin-colorado-f857f.firebaseapp.com",
+        databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+        projectId: "colorin-colorado-f857f",
+        storageBucket: "colorin-colorado-f857f.appspot.com",
+        messagingSenderId: "31331535773",
+        appId: "1:31331535773:web:55d57a73caeb602085bd74",
+        measurementId: "G-37YPHDXTPN"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  
+    <!-- CUSTOM CODE -->
+    <script src="registroCuentoCorto.js"></script> 
 </body>
 </html>
