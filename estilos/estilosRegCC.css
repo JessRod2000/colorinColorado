@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+#text1{
+  color: #cf2c2c;
+  font-size: 0.4cm;
+}
+#text2{
+  color: #cf2c2c;
+  font-size: 0.4cm;
+}
+#text3{
+  color: #cf2c2c;
+  font-size: 0.4cm;
+}
 /*{
     margin:0;
 }
@@ -44,7 +56,6 @@
 .sub{
     font-size:8pt;
 }*/
-
 body{
     overflow-x: hidden;
   }
