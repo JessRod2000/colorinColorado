@@ -40,6 +40,32 @@ body::-webkit-scrollbar-thumb{
   color: #1883ba;
   background-color: #ffffff;
 }
+.barra_categorias{
+  background-color: #31e6b8;
+}
+.boton_categoria{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 7px;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: #31e6b8;
+  border-radius: 6px;
+	border: 2px solid #31e6b8;
+}
+.boton_categoria:hover{
+  color: #1883ba;
+  background-color: #ffffff;
+  border: 2px solid #078061;
+}
+.boton_categoria:visited{
+  color: #1883ba;
+  background-color: #000000;
+  border: 2px solid #078061;
+}
 .boton_cuento{
   width:250px;
   font-family: 'Arima Madurai', cursive;
@@ -50,10 +76,10 @@ body::-webkit-scrollbar-thumb{
   font-weight: 600;
   font-size: 0.53cm;
   color: #ffffff;
-  background-color: #2b614f;
+  background-color: #07c898;
   border-radius: 5px;
-	border: 2px solid #078061;
-   }
+  border: 2px solid #078061;
+}
   .boton_cuento:hover{
     color: #1883ba;
     background-color: #ffffff;

@@ -35,7 +35,15 @@
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
+<<<<<<< HEAD
                     <input type="text" id="titulobox"  name="titulo" size="48" required>
+=======
+                    <input type="text" id="titulobox"  name="titulo" size="48" required onkeydown="validacion()">
+                </div>
+                <div>
+                    <span id="text1"></span>
+                    <span id="text2"></span>
+>>>>>>> babdef94f7de997db67e9dac45d135053403ee1d
                 </div>
             </div>
         </div>
@@ -63,8 +71,14 @@
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
+<<<<<<< HEAD
                     <textarea id="contenidobox" class="formulario_input"name="contenido" required
                 rows="4" cols="50"></textarea>
+=======
+                    <textarea id="contenidobox" class="formulario_input"name="contenido" 
+                rows="4" cols="50" required></textarea>
+                <span id="text3"></span>
+>>>>>>> babdef94f7de997db67e9dac45d135053403ee1d
                 </div>
                 
             </div>
@@ -78,15 +92,20 @@
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
+<<<<<<< HEAD
                     <input class="elegir-archivo" type="file" name="file" required
                accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" />
+=======
+                    <input class="elegir-archivo" type="file" name="file" 
+               accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" required/>
+>>>>>>> babdef94f7de997db67e9dac45d135053403ee1d
                 </div>
             </div>
         </div>
            
 
         <div align ="center">
-            <input type="submit" id="registrar" class="button" value="Registrar">
+            <input type="submit" class="button" value="Registrar">
         </div>
     </form>
     </div>
@@ -125,7 +144,34 @@
     }
     </script>
 
+<script type ="text/javascript">
+    function validacion(){
+        var form = document.getElementById("formulario_registro");
+        var titulobox = document.getElementById("titulobox").value;
+        var text1 = document.getElementById("text1");
+        var pattern = /^[A-Za-z\d\s\u00fc\u003f\u00bf\u0021\u00a1\u00f1\u00dc\u002c\u00b4\u00c1\u00e1\u00c9\u00e9\u00cd\u00ed\u00d3\u00f3\u00da\u00fa]+$/;
+        
+        
+        if(titulobox.match(pattern)){
+            form.classList.add("valid");
+            form.classList.remove("invalid");
+            text1.innerHTML = "";
+        }
+        
+        else{
+            form.classList.remove("valid");
+            form.classList.add("invalid");
+            text1.innerHTML = "Por favor ingrese un titulo válido!";
 
+        }
+        if(titulobox == ""){
+            form.classList.remove("valid");
+            form.classList.remove("invalid");
+            text1.innerHTML = "";
+        }
+    
+    }
+</script>
 
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
