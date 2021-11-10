@@ -79,7 +79,7 @@
             <div class="col-md-7">
                 <div class="input-contenedor" >
                     <input class="elegir-archivo" type="file" name="file" 
-                accept=".png,.jpg,.jpeg" id="elegirArchivo"/>
+               accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" />
                 </div>
             </div>
         </div>
@@ -94,6 +94,39 @@
 
     
     </section>
+
+    <script>
+    function validateimg(ctrl) { 
+        var fileUpload = ctrl;
+            if (typeof (fileUpload.files) != "undefined") {
+                var reader = new FileReader();
+                reader.readAsDataURL(fileUpload.files[0]);
+                reader.onload = function (e) {
+                    var image = new Image();
+                    image.src = e.target.result;
+                    image.onload = function () {
+                        var height = this.height;
+                        var width = this.width;
+                        if ((height - width) >=10 || (width - height) >=10)  {
+                            alert("Imagen no valido, Alto y Ancho distintos en valor ");
+                            var inputImage = document.getElementById("elegirArchivo");
+                            inputImage.value = '';
+                            return false;
+                        }else{
+                            alert("Imagen cargada, Alto y Ancho validos");
+                            return true;
+                        }
+                    };
+                }
+            } else {
+                alert("This browser does not support HTML5.");
+                return false;
+            }
+    }
+    </script>
+
+
+
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
