@@ -9,7 +9,7 @@ body::-webkit-scrollbar-thumb{
   background: #07c898;
   border-radius:5px;
 }
-#titulo{
+.titulo{
   color: #05926f;
   font-size:1.7cm;
   font-family: 'Rampart One', cursive;
@@ -25,6 +25,7 @@ body::-webkit-scrollbar-thumb{
   min-width: 580px;
   background-color: #07c898;
 }
+
 .boton_atras{
   text-decoration: none;
   font-family: 'Arima Madurai', cursive;
@@ -39,6 +40,24 @@ body::-webkit-scrollbar-thumb{
 .boton_atras:hover{
   color: #1883ba;
   background-color: #ffffff;
+}
+.boton_cerrar_sesion{
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #08374e;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #08374e;
+  position:absolute;
+  top:20px;
+  right:10px;
+}
+.boton_cerrar_sesion:hover{
+  background-color: #a9cfe2;
 }
 .boton_cuento{
   width:250px;
