@@ -7,7 +7,7 @@
   <title>Acceso Administradores</title>
   <link rel="stylesheet" type="text/css" href="estilos/estilosAcceder.css">  
   <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
 </head>
@@ -21,7 +21,7 @@
           <div style="padding-left: 35px; padding-top: 25px;">
            <a class="boton_atras" href="index.html">Atrás</a>
     </header>
-   
+
     <div class="contenedor">
             <div class="titulo">Inicio de Sesión</div>
             <div style="margin: 18px;">
@@ -40,11 +40,11 @@
                  <input id="password" type="password" placeholder="Contraseña">
                  </div>
             </div> 
-            
+
              <div align ="center">
                 <button type="submit" class="button" onclick="login()">Acceder</button>
              </div>
-             
+
     </div>
     <script type="module">
       // Import the functions you need from the SDKs you need
@@ -72,7 +72,7 @@
       const usuario = localStorage.getItem("datosUsuario");
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
-      
+
       function login() {
         const correo = document.getElementById("email").value;
         const contraseña = document.getElementById("password").value;
@@ -96,10 +96,11 @@
             const errorCode = error.code;
             const errorMessage = error.message;
             alert('El correo o la contraseña son incorrectos, Por favor verifica los datos')
+
           });
         console.log("probando");
       }}
       window.login = login;
     </script>
 </body>
-</html>
+</html> 
