@@ -38,12 +38,12 @@ background-color: #10BCE3;
   background-color: #a9cfe2;
 }
 
-#botonesAdmin-Cerr{
+#botonesAdmin-Cerr, .boton_iniciar_sesion{
   display: inline-block;
   float: right;
   margin-top: 13px;
 }
-.boton_cerrar_sesion{
+.boton_cerrar_sesion, .boton_iniciar_sesion{
   display: inline-block;
   text-decoration: none;
   font-family: 'Arima Madurai', cursive;
@@ -55,9 +55,10 @@ background-color: #10BCE3;
   border-radius: 5px;
   border: 2px solid #08374e;
 }
-.boton_cerrar_sesion:hover{
+.boton_cerrar_sesion:hover , .boton_iniciar_sesion:hover{
   background-color: #a9cfe2;
 }
+
 .boton_administrar{
   display: inline-block;
   text-decoration: none;
@@ -90,6 +91,11 @@ background-color: #10BCE3;
 }
 .textoHeader{
   display: inline-block;
+}
+#botonInic{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
 }
 @media screen and (max-width:990px){
   .textoHeader{
@@ -130,10 +136,15 @@ background-color: #10BCE3;
     margin-top: 10px;
     font-size: 13.5px;
   }
-  .boton_cerrar_sesion{
+  .boton_cerrar_sesion {
     padding: 2px;
     margin-top: 10px;
     font-size: 13.5px;
   }
+  .boton_iniciar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  } 
  
 }
