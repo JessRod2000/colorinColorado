@@ -41,7 +41,7 @@ document.getElementById("formulario_registro").addEventListener("submit", functi
             alert("arregle los campos");
             controlar=true;
         }
-    //document.getElementById("formulario_registro").reset();
+    document.getElementById("formulario_registro").reset();
 });
 //-----------------contar palabras------------------------
 function contar_palabras_titulo(){
