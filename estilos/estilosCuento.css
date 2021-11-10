@@ -29,6 +29,7 @@ body::-webkit-scrollbar-thumb{
     text-align: left;
     font-size: 0.65cm;
     padding:1.8%;
+    min-width: 580px;
     background-color: #07c898;
   }
 .titulo{
@@ -52,7 +53,13 @@ body::-webkit-scrollbar-thumb{
   max-height: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 580px) {
+  body{
+    margin-top: 4rem;
+  }
+  .header{
+    min-width: 100%;
+  }
   .titulo{
        font-size: 0.8cm;
   }

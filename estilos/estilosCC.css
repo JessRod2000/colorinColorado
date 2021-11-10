@@ -22,6 +22,7 @@ body::-webkit-scrollbar-thumb{
   text-align: left;
   font-size: 0.65cm;
   padding:1.8%;
+  min-width: 580px;
   background-color: #07c898;
 }
 .boton_atras{
@@ -72,7 +73,12 @@ h1{
 }
 
 @media screen and (max-width: 580px) {
-
+  body{
+    margin-top: 4rem;
+  }
+  .header{
+    min-width: 100%;
+  }
   .titulo{
    font-size: 0.8cm;
   }
