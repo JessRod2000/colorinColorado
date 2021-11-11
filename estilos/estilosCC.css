@@ -100,33 +100,17 @@ h1{
   font-family: 'Arima Madurai', cursive;
 }
 
+#botonCerr{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
 .general{
   min-width: 100%;
   max-height: 100%;
   margin-bottom: 15px;
 }
 
-.boton_registro{
-  text-decoration: none;
-font-family: 'Rampart One', cursive;
-  padding: 5px;
-  margin-top: 20px;
-  font-weight: 600;
-  font-size: 40px;
-  color: #078061;
-  background-color: #0000;
-  border-radius: 5px;
-  border: 2px solid #078061;
-}
-
-.boton_registro:hover{
-  background-color: #a9cfe2;
-}
-#botonCerr{
-  display: inline-block;
-  float: right;
-  margin-top: 13px;
-}
 
 .textoHeader{
   display: inline-block;
@@ -137,8 +121,9 @@ font-family: 'Rampart One', cursive;
   }
 }
 @media screen and (max-width: 610px) {
-  .titulo{
+  #titulo{
    font-size: 0.8cm;
+   margin-top: 10px;
   }
   .boton_atras{
     font-size: 15px;
@@ -156,5 +141,8 @@ font-family: 'Rampart One', cursive;
     margin-top: 10px;
     font-size: 13.5px;
   } 
+  .boton_categoria{
+    font-size: 20px;
+  }
   
 }
