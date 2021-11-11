@@ -126,6 +126,9 @@ input.elegir-archivo{
 .input-contenedor .elegir-archivo{ 
   width: 100%;
 }
+.general{
+  margin-bottom: 20px;
+}
 
 #botonCerr{
   display: inline-block;
