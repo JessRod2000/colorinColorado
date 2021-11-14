@@ -8,13 +8,21 @@
 	<link rel="stylesheet" type="text/css" href="estilos/estilosCuento.css">
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
-  <!-- BOOTSWATCH -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
 
 </head>
 <body>
 </head>
 <body>
+    <!-- Metodo para evitar que se entre desde url -->
+  <script type="text/javascript">
+    var urlanterior = document.referrer;
+    if(urlanterior == ''){
+    alert('Usted no tiene acceso a esta página!');
+    window.location.href = "index.html";
+    }
+    </script>
+      <!-- fin de metodo -->
    <div class="general">
     <header >
       <div class="cabecera">
