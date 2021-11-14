@@ -12,21 +12,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+   <!-- Metodo para evitar que se entre desde url -->
+   <script type="text/javascript">
+    var urlanterior = document.referrer;
+    if(urlanterior == ''){
+    alert('Usted no tiene acceso a esta página!');
+    window.location.href = "index.html";
+    }
+    </script>
+      <!-- fin de metodo -->
   <div class="general">
     <header >
       <div class="cabecera">
-        <a title="Cuentos cortos" href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
-        Curso de Lectura de Comprensión
+     <a title="Cuentos cortos" href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+       <div class="textoHeader">Curso de Lectura de Comprensión</div>
+       <div id="botonesAdmin-Cerr">
         <a class="boton_administrar" href="administrarContenido.html">Administrar contenido</a>
-        <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()" >Cerrar Sesion</button>>
+        <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()">Cerrar Sesion</button>
+       </div>
+        
       </div>
     </header>
     
    <div id="titulo">
       Colorín Colorado
     </div>
-  
-
 	<div align="center" style="padding-bottom: 30px; margin-top: 35px;">
     <a href="CuentosCortosSesionIniciada.html"> <img src="iconos/cuentosCortos.png" height="250px" alt="cortitos" /></a>
     
@@ -37,6 +47,7 @@
 
   </div>
  
+    </script>
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
   
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>  
@@ -44,7 +55,7 @@
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
-
+  
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -103,8 +114,6 @@
   }
   window.logout = logout;
 </script>
-  <!-- CUSTOM CODE -->
-  <script src="index.js"></script>
 </div>
 </body>
 <footer>
