@@ -12,30 +12,31 @@
     <!-- BOOTSWATCH -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body class="mod_body">
     <div class="general">
         <header>
             <div class="cabecera">
-                <a title="Cuentos cortos" href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
                 Curso de Lectura de Comprensión
             </div>
         </header>
         <div style="padding-left: 35px; padding-top: 25px;">
-            <a class="boton_atras" href="index.html">Atrás</a>
-    </div>  
-    <div class="contenedor" style="margin-top:50px;">
+            <a class="boton_atras" href="administrarContenido.html">Atrás</a>
+       </div>  
+    <div class="contenedor">
         <form id="formulario_registro">
         <div class="titulo">Registrar Cuento Corto</div>
 
         <div class="row"style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div >Titulo:</div>
+                <div id="campos" >Titulo:</div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
-                    <input type="text" id="titulobox"  name="titulo" size="48" required onkeydown="validacion()">
+                    <input type="text" id="titulobox"  name="titulo" size="48" autocomplete="off" required onkeydown="validacion()">
                 </div>
                 <div>
                     <span id="text1"></span>
@@ -47,7 +48,7 @@
         <div class="row"style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div>Categoria: </div>
+                <div id="campos">Categoria: </div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
@@ -63,7 +64,7 @@
 
         <div class="row" style="margin:8px;">
             <div class="col-md-3" id="etiquetas">
-                <div >Contenido: </div>
+                <div id="campos">Contenido: </div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
@@ -79,11 +80,11 @@
         <div class="row" style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div >Imagen:</div>
+                <div id="campos">Imagen:</div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
-                    <input class="elegir-archivo" type="file" name="file" 
+                    <input class="elegir-archivo" type="file" name="file"
                accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" required/>
                 </div>
             </div>
@@ -184,5 +185,4 @@
     <!-- CUSTOM CODE -->
     <script src="registroCuentoCorto.js"></script> 
 </body>
-
 </html>

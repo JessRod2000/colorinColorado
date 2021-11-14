@@ -12,6 +12,8 @@ const btnFabulas = document.getElementById("Fabulas");
 const btnFantasia = document.getElementById("Fantasia");
 const btnClasicos = document.getElementById("Clasicos");
 
+const btnElegido = document.getElementById("");
+
 document.getElementById("Fabulas").onclick = async(e) =>{
     const coleccionFabula = await getCuentosFabula();
     var numActual=1;
@@ -30,7 +32,7 @@ document.getElementById("Fabulas").onclick = async(e) =>{
             primeraCol.innerHTML += `<div>
             <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
             
-            <form action="Fabulas.html" method="GET">
+            <form action="FabulasSesionIniciada.html" method="GET">
             <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
             </form>  
             `
@@ -40,7 +42,7 @@ document.getElementById("Fabulas").onclick = async(e) =>{
                 segundaCol.innerHTML += `<div>
                 <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
                 
-                <form action="Fabulas.html" method="GET">
+                <form action="FabulasSesionIniciada.html" method="GET">
                 <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
                 </form>  
                 `
@@ -49,7 +51,7 @@ document.getElementById("Fabulas").onclick = async(e) =>{
                 terceraCol.innerHTML += `<div>
                 <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
                 
-                <form action="Fabulas.html" method="GET">
+                <form action="FabulasSesionIniciada.html" method="GET">
                 <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
                 </form>  
                 `
@@ -76,7 +78,7 @@ document.getElementById("Fantasia").onclick = async(e) =>{
             primeraCol.innerHTML += `<div>
             <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
             
-            <form action="Fantasia.html" method="GET">
+            <form action="FantasiaSesionIniciada.html" method="GET">
             <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
             </form>  
             `
@@ -86,7 +88,7 @@ document.getElementById("Fantasia").onclick = async(e) =>{
                 segundaCol.innerHTML += `<div>
                 <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
                 
-                <form action="Fantasia.html" method="GET">
+                <form action="FantasiaSesionIniciada.html" method="GET">
                 <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
                 </form>  
                 `
@@ -95,7 +97,7 @@ document.getElementById("Fantasia").onclick = async(e) =>{
                 terceraCol.innerHTML += `<div>
                 <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
                 
-                <form action="Fantasia.html" method="GET">
+                <form action="FantasiaSesionIniciada.html" method="GET">
                 <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
                 </form>  
                 `
@@ -122,7 +124,7 @@ document.getElementById("Clasicos").onclick = async(e) =>{
             primeraCol.innerHTML += `<div>
             <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
             
-            <form action="Clasicos.html" method="GET">
+            <form action="ClasicosSesionIniciada.html" method="GET">
             <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
             </form>  
             `
@@ -132,7 +134,7 @@ document.getElementById("Clasicos").onclick = async(e) =>{
                 segundaCol.innerHTML += `<div>
                 <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
                 
-                <form action="Clasicos.html" method="GET">
+                <form action="ClasicosSesionIniciada.html" method="GET">
                 <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
                 </form>  
                 `
@@ -141,7 +143,7 @@ document.getElementById("Clasicos").onclick = async(e) =>{
                 terceraCol.innerHTML += `<div>
                 <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
                 
-                <form action="Clasicos.html" method="GET">
+                <form action="ClasicosSesionIniciada.html" method="GET">
                 <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
                 </form>  
                 `
@@ -150,43 +152,3 @@ document.getElementById("Clasicos").onclick = async(e) =>{
         }
     })
 }
-/*
-window.addEventListener('DOMContentLoaded', async(e) =>{
-    const coleccionFabula = await getCuentosFabula();
-    const coleccionClasicos = await getCuentosClasicos();
-    const coleccionFantasia = await getCuentosFantasia();
-    coleccionFabula.forEach(doc =>{
-        cuentosFab.innerHTML += `<div>
-            <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
-          
-         <form action="Fabulas.html" method="GET">
-          <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
-       </form>  
-          `
-        
-    })
-    
-    coleccionClasicos.forEach(doc =>{
-        cuentosClas.innerHTML += `<div>
-        <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
-          
-        <form action="Clasicos.html" method="GET">
-         <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
-         
-       </form>
-
-        `
-    })
-    coleccionFantasia.forEach(doc =>{
-        cuentosFan.innerHTML += `<div>
-        <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
-          
-        <form action="Fantasia.html" method="GET">
-         <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
-         
-       </form>
-
-        `
-    })
-    
-})*/
