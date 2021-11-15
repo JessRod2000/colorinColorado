@@ -77,16 +77,20 @@
         </div>
 
     
-        <div class="row" style="margin: 8px;">
+        <div class="row" style="margin: 8px; display: inline;">
 
             <div class="col-md-3" id="etiquetas">
                 <div id="campos">Imagen:</div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7" style="display: inline;">
                 <div class="input-contenedor" >
+                    <label for="elegirArchivo"  class="seleccionar-archivo">
+                        <i class="fas fa.cloud-upload-alt">Seleccionar archivo</i>
+                    </label>
                     <input class="elegir-archivo" type="file" name="file"
-               accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" required/>
+               accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this), cambiar(), validateFile()" style='display:none;' required/>
                 </div>
+                <div id="infoImg" class="elegir-archivo">No se eligió ningún archivo</div>
             </div>
         </div>
            
@@ -102,6 +106,23 @@
     </section>
 
     <script>
+    function cambiar(){
+                        var pdrs = document.getElementById('elegirArchivo').files[0].name;
+                        document.getElementById('infoImg').innerHTML =pdrs;
+                    }
+    function validateFile(){
+                                var nameFile = document.getElementById("elegirArchivo").files[0].name;
+                                var extension = nameFile.split('.').pop();
+                                if(extension == "jpg" || extension == "png" || extension == "jpeg"){
+                                    return true;
+                                }else{
+                                    alert("Doumento no válido");
+                                    var inputImage = document.getElementById("elegirArchivo");
+                                    inputImage.value = '';
+                                    return false;
+                                }
+                        
+                            }
     function validateimg(ctrl) { 
         var fileUpload = ctrl;
             if (typeof (fileUpload.files) != "undefined") {
