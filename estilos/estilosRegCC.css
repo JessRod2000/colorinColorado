@@ -108,7 +108,7 @@ input[type="submit"]{
     border: 2px solid #000;
     background-color: #ffffff ;
     font-family: 'Arima Madurai', cursive;
-    font-size: 20px;
+    font-size: 17px;
     padding: 6px;
     border-radius: 6px;
     margin-top:9px;
@@ -203,5 +203,7 @@ input.elegir-archivo{
       font-family: 'Arima Madurai', cursive;
       color: #045d5d;
     }
-    
+    .button{
+      min-width: fit-content;
+    }
   }
