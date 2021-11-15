@@ -88,6 +88,10 @@ function contar_palabras_contenido(){
         controlar=false;
         //document.getElementById("contenidobox").value ="";
     }else{
+        if(numeroPalabras<100){
+            text3.innerHTML = "la cantidad mínima de palabras aceptadas es de 100";
+            controlar=false;
+        }
     }
     //alert(numeroPalabras);
 }
