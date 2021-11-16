@@ -15,7 +15,7 @@
 <body>
   <header>
     <div class="cabecera">    
-     <a title="Cuentos cortos" href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+     <a href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
      Curso de Lectura de Comprensión
      </div>
    </header>
@@ -25,28 +25,36 @@
 <hr>
      <div id="titulo">Cuentos Cortos</div>  
 
-    <section id="categorias" class="containMain">
+     <div class="barra_categorias">
       <div class="row" id="foto">
         <div class="col-md-4" id="Fabulas" align="center">
-          <h1>Fábulas</h1>
-          <div id="cuentosFab"></div>
+          <button class="boton_categoria">Fábulas</button>
         </div>
         <div class="col-md-4" id="Fantasia" align="center">
-          <h1>Fantasía</h1>
-          <div id="cuentosFan"></div>
+          <button class="boton_categoria">Fantasía</button>
         </div>
         <div class="col-md-4" id="Clasicos" align="center">
-          <h1>Clásicos</h1>
-          <div id="cuentosClas"></div>
+          <button class="boton_categoria">Clásicos</button>
         </div>
       </div>
+    </div>
+    <section id="categorias" class="containMain">
+      <div class="row" id="foto">
+        <div class="col-md-4" align="center">
+          <div id="primeraCol"></div>
+        </div>
+        <div class="col-md-4" align="center">
+          <div id="segundaCol"></div>
+        </div>
+        <div class="col-md-4" align="center">
+          <div id="terceraCol"></div>
+        </div>
+      </div>
+      <div id="nuevoCuento"></div>
     </section>
+      
 	   
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
-  
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
 
   <script>

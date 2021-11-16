@@ -1,38 +1,78 @@
-
+body{
+  overflow-x: hidden;
+  width: 100%;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background: #10BCE3;
+  border-radius:5px;
+}
 #titulo{
-  text-align: center;
-	color: #09809b;
-  font-family: 'Rampart One', cursive;
-  font-size: 1.7cm;
+text-align: center;
+color: #09809b;
+font-family: 'Rampart One', cursive;
+font-size: 1.7cm;
 } 
 .cabecera{
-  font-family: 'Arima Madurai', cursive;
-  text-align: left;
-  font-size: 0.65cm;
-  padding:1.8%;
-  background-color: #10BCE3;
+font-family: 'Arima Madurai', cursive;
+text-align: left;
+font-size: 0.65cm;
+padding:1.8%;
+background-color: #10BCE3;
 }
 .boton_personalizado{
-    text-decoration: none;
-    font-family: 'Arima Madurai', cursive;
-    padding: 5px;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 30px;
-    color: #1883ba;
-    background-color: #0000;
-    border-radius: 5px;
-    border: 2px solid #015e75;
-  }
-  .boton_personalizado:hover{
-    background-color: #a9cfe2;
-  }
-body::-webkit-scrollbar {
-    width: 10px;
-  }
-body::-webkit-scrollbar-thumb{
-    background: #10BCE3;
-    border-radius:5px;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 30px;
+  color: #1883ba;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #015e75;
+}
+.boton_personalizado:hover{
+  background-color: #a9cfe2;
+}
+
+#botonesAdmin-Cerr, .boton_iniciar_sesion{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
+.boton_cerrar_sesion, .boton_iniciar_sesion{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #08374e;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #08374e;
+}
+.boton_cerrar_sesion:hover , .boton_iniciar_sesion:hover{
+  background-color: #a9cfe2;
+}
+
+.boton_administrar{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #08374e;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #08374e;
+}
+.boton_administrar:hover{
+  background-color: #a9cfe2;
 }
 .footer{
   text-align: center;
@@ -49,8 +89,18 @@ body::-webkit-scrollbar-thumb{
   min-width: 100%;
   max-height: 100%;
 }
-body{
-    overflow-x: hidden;
+.textoHeader{
+  display: inline-block;
+}
+#botonInic{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
+@media screen and (max-width:990px){
+  .textoHeader{
+    display: none;
+  }
 }
 @media screen and (max-width: 600px) {
   .cabecera{
@@ -58,6 +108,9 @@ body{
   }
   #logo{
     height: 60px;
+  }
+  .logoEsp{
+    width: 30%;
   }
   #titulo{
     font-size: 0.8cm;
@@ -73,4 +126,25 @@ body{
     padding-left: 3%;
     padding-right: 3%;
   }
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .boton_administrar{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .boton_cerrar_sesion {
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .boton_iniciar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  } 
+ 
 }
