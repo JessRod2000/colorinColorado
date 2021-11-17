@@ -15,6 +15,15 @@
     <title>Document</title>
 </head>
 <body class="mod_body">
+    <!-- Metodo para evitar que se entre desde url -->
+    <script type="text/javascript">
+        var urlanterior = document.referrer;
+        if(urlanterior == ''){
+        alert('Usted no tiene acceso a esta página!');
+        window.location.href = "index.html";
+        }
+        </script>
+          <!-- fin de metodo -->
     <div class="general">
         <header>
             <div class="cabecera">
