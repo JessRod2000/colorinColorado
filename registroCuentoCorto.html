@@ -15,15 +15,6 @@
     <title>Document</title>
 </head>
 <body class="mod_body">
-    <!-- Metodo para evitar que se entre desde url -->
-    <script type="text/javascript">
-        var urlanterior = document.referrer;
-        if(urlanterior == ''){
-        alert('Usted no tiene acceso a esta página!');
-        window.location.href = "index.html";
-        }
-        </script>
-          <!-- fin de metodo -->
     <div class="general">
         <header>
             <div class="cabecera">
@@ -123,12 +114,12 @@
                         var height = this.height;
                         var width = this.width;
                         if ((height - width) >=10 || (width - height) >=10)  {
-                            alert("Imagen no valido, Alto y Ancho distintos en valor ");
+                            alert("Imagen no valido, alto y ancho distintos en valor ");
                             var inputImage = document.getElementById("elegirArchivo");
                             inputImage.value = '';
                             return false;
                         }else{
-                            alert("Imagen cargada, Alto y Ancho validos");
+                            alert("Imagen cargada, alto y ancho validos");
                             return true;
                         }
                     };
