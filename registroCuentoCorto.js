@@ -4,7 +4,7 @@ const dbfirestore = firebase.firestore();
 var ImgName, ImgUrl, Categoria, TituloCuento, ContenidoCuento, imagen;
 var files = [];
 var reader;
-var controlar = true;
+var controlar = "true";
 //-----------para abrir el explorador de archivo-------------
 
 document.getElementById("elegirArchivo").onclick = function(e){
@@ -12,6 +12,7 @@ document.getElementById("elegirArchivo").onclick = function(e){
 };
 document.getElementById("formulario_registro").addEventListener("submit", function(event){
     event.preventDefault();
+    validacion_titulo();
     contar_palabras_titulo();
     contar_palabras_contenido();
         if(controlar==true){
@@ -41,7 +42,7 @@ document.getElementById("formulario_registro").addEventListener("submit", functi
             alert("arregle los campos");
             controlar=true;
         }
-    //document.getElementById("formulario_registro").reset();
+    document.getElementById("formulario_registro").reset();
 });
 //-----------------contar palabras------------------------
 function contar_palabras_titulo(){
@@ -88,8 +89,26 @@ function contar_palabras_contenido(){
         controlar=false;
         //document.getElementById("contenidobox").value ="";
     }else{
+        if(numeroPalabras<100){
+            text3.innerHTML = "la cantidad mínima de palabras aceptadas es de 100";
+            controlar=false;
+        }
     }
     //alert(numeroPalabras);
+}
+//-----------------validar el titulo------------------
+function validacion_titulo(){
+    var titulobox = document.getElementById("titulobox").value;
+    var text1 = document.getElementById("text1");
+    var pattern = /^[A-Za-z\d\s\u00fc\u003f\u00bf\u0021\u00a1\u00f1\u00dc\u002c\u00b4\u00c1\u00e1\u00c9\u00e9\u00cd\u00ed\u00d3\u00f3\u00da\u00fa]+$/;
+    
+    if(titulobox.match(pattern)){
+        text1.innerHTML = "";
+    }
+    else{
+        controlar = false;
+        text1.innerHTML = "Se aceptan caracteres alfanuméricos, ¿,?,!,¡";
+    }
 }
 //-----------------para subir al STORAGE de Firebase----------
 /*

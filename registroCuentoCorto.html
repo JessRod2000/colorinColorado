@@ -12,30 +12,31 @@
     <!-- BOOTSWATCH -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body class="mod_body">
     <div class="general">
         <header>
             <div class="cabecera">
-                <a title="Cuentos cortos" href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
                 Curso de Lectura de Comprensión
             </div>
         </header>
         <div style="padding-left: 35px; padding-top: 25px;">
-            <a class="boton_atras" href="index.html">Atrás</a>
-    </div>  
-    <div class="contenedor" style="margin-top:50px;">
+            <a class="boton_atras" href="administrarContenido.html">Atrás</a>
+       </div>  
+    <div class="contenedor">
         <form id="formulario_registro">
         <div class="titulo">Registrar Cuento Corto</div>
 
         <div class="row"style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div >Titulo:</div>
+                <div id="campos" >Titulo:</div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
-                    <input type="text" id="titulobox"  name="titulo" size="48" required onkeydown="validacion()">
+                    <input type="text" id="titulobox"  name="titulo" size="48" autocomplete="off" required onkeyup="validacion()">
                 </div>
                 <div>
                     <span id="text1"></span>
@@ -47,7 +48,7 @@
         <div class="row"style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div>Categoria: </div>
+                <div id="campos">Categoria: </div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
@@ -63,7 +64,7 @@
 
         <div class="row" style="margin:8px;">
             <div class="col-md-3" id="etiquetas">
-                <div >Contenido: </div>
+                <div id="campos">Contenido: </div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
@@ -79,11 +80,11 @@
         <div class="row" style="margin: 8px;">
 
             <div class="col-md-3" id="etiquetas">
-                <div >Imagen:</div>
+                <div id="campos">Imagen:</div>
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
-                    <input class="elegir-archivo" type="file" name="file" 
+                    <input class="elegir-archivo" type="file" name="file"
                accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this)" required/>
                 </div>
             </div>
@@ -132,29 +133,58 @@
 
 <script type ="text/javascript">
     function validacion(){
-        var form = document.getElementById("formulario_registro");
         var titulobox = document.getElementById("titulobox").value;
         var text1 = document.getElementById("text1");
+        var text2 = document.getElementById("text2");
         var pattern = /^[A-Za-z\d\s\u00fc\u003f\u00bf\u0021\u00a1\u00f1\u00dc\u002c\u00b4\u00c1\u00e1\u00c9\u00e9\u00cd\u00ed\u00d3\u00f3\u00da\u00fa]+$/;
-        
-        
+        var existe = "false";
+        if(existe=="false"){
+            text2.innerHTML = "";
+        }
         if(titulobox.match(pattern)){
-            form.classList.add("valid");
-            form.classList.remove("invalid");
             text1.innerHTML = "";
         }
         
         else{
-            form.classList.remove("valid");
-            form.classList.add("invalid");
-            text1.innerHTML = "Por favor ingrese un titulo válido!";
+            text1.innerHTML = "Solo se aceptan caracteres alfanuméricos, ¿, ?, ¡, !";
 
         }
         if(titulobox == ""){
-            form.classList.remove("valid");
-            form.classList.remove("invalid");
             text1.innerHTML = "";
         }
+        dbfirestore.collection('Fabulas').get().then((snapshot)=>{
+                snapshot.docs.forEach(doc=>{
+                    if(titulobox == doc.data().TituloCuento){
+                        text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                        existe = "true";
+                    }
+                })
+                
+            })
+            
+            dbfirestore.collection('Fantasia').get().then((snapshot)=>{
+                snapshot.docs.forEach(doc=>{
+                    if(titulobox == doc.data().TituloCuento){
+                        text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                        existe = "true";
+                    }
+                    
+                })
+                
+            })
+            dbfirestore.collection('Clasicos').get().then((snapshot)=>{
+                snapshot.docs.forEach(doc=>{
+                    if(titulobox == doc.data().TituloCuento){
+                        text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                        existe = "true";
+                    }
+                    
+                })
+                
+            })
+            if(existe=="true"){
+                existe=="false";
+            }
     
     }
 </script>
@@ -182,5 +212,4 @@
     <!-- CUSTOM CODE -->
     <script src="registroCuentoCorto.js"></script> 
 </body>
-
 </html>
