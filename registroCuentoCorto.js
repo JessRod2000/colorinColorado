@@ -14,35 +14,102 @@ document.getElementById("formulario_registro").addEventListener("submit", functi
     event.preventDefault();
     contar_palabras_titulo();
     contar_palabras_contenido();
-        if(controlar==true){
-            TituloCuento = document.getElementById('titulobox').value;
-            ContenidoCuento = document.getElementById('contenidobox').value;
-            Categoria = document.getElementById("categorias").value;
-            imagen = document.getElementById('elegirArchivo').files[0];
+    Categoria = document.getElementById("categorias").value;
+    TituloCuento = document.getElementById('titulobox').value;
+    ContenidoCuento = document.getElementById('contenidobox').value;
+    Categoria = document.getElementById("categorias").value;
+    imagen = document.getElementById('elegirArchivo').files[0];
+    pruebaRegistrar();
+    
+    document.getElementById("formulario_registro").reset();
 
-            var uploadTask = dbstorage.ref('Images_'+Categoria+'/'+TituloCuento+"_imagen.png").put(imagen);
+});
+//-------------------------PRUEBA----------------------------------------
+async function pruebaRegistrar(){//NOMBRE DE LLAMADA LINEA 27
+    await testTitulos();
 
-            uploadTask.on('state_changed',function(snapshot){
-            },
-        //---------------por si hay error----------------//
-            function(error){
+    if (controlar == "true") {
+        await obtenerUrl();
+        const response = dbfirestore.collection(Categoria).doc().set({ TituloCuento, ContenidoCuento, ImgUrl});
+        alert('Cuento registrado');
+    } else {
+        alert("arregle los campos");
+        controlar = "true";
+    }
+}
+
+function testTitulos(){
+    return new Promise((resolve,reject)=>{
+        var titulo = document.getElementById("titulobox").value;
+            dbfirestore.collection('Fabulas').get().then((snapshot)=>{
+                snapshot.docs.forEach(doc=>{
+                    if(titulo == doc.data().TituloCuento){
+                        controlar = "false";
+                        text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                        console.log(controlar);
+                    }
+                }
+                );
+        setTimeout(()=>{
+            console.log("Hello from inside the testAsync function");
+            resolve();
+            ;} , 1000);
+        });
+        dbfirestore.collection('Fantasia').get().then((snapshot)=>{
+            snapshot.docs.forEach(doc=>{
+                if(titulo == doc.data().TituloCuento){
+                    controlar = "false";
+                    text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                    console.log(controlar);
+                }
+            }
+            );
+    setTimeout(()=>{
+        console.log("Hello from inside the testAsync function");
+        resolve();
+        ;} , 1000);
+    });
+    dbfirestore.collection('Clasicos').get().then((snapshot)=>{
+        snapshot.docs.forEach(doc=>{
+            if(titulo == doc.data().TituloCuento){
+                controlar = "false";
+                text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                console.log(controlar);
+            }
+        }
+        );
+    setTimeout(()=>{
+    console.log("Hello from inside the testAsync function");
+    resolve();
+    ;} , 1000);
+    });
+    });
+}
+//---------------obtener URL de la imagen subida al storage--------------------------
+function obtenerUrl(){
+    return new Promise((resolve,reject)=>{
+        var uploadTask = dbstorage.ref('Images_' + Categoria + '/' + TituloCuento + "_imagen.png").put(imagen);
+        uploadTask.on('state_changed', function (snapshot) {},
+            //---------------por si hay error----------------//
+            function (error) {
+                console('aqui')
                 alert('error al guardar');
             },
-        //---------------guardar el link de la imagen en database----------------//
-            function(){
-                uploadTask.snapshot.ref.getDownloadURL().then(function(url){
+            //---------------guardar el link de la imagen en database----------------//
+            function (){
+                uploadTask.snapshot.ref.getDownloadURL().then(function (url) {
+                    ImgUrl = url; 
                     
-                    ImgUrl = url;
-                    const response = dbfirestore.collection(Categoria).doc().set({TituloCuento,ContenidoCuento,ImgUrl});
-                    alert('Cuento registrado');
+                    setTimeout(()=>{
+                        console.log("Hello from inside the testAsync function");
+                        resolve();
+                    ;} , 1000);
                 });
-            });
-        }else{
-            alert("arregle los campos");
-            controlar=true;
-        }
-    document.getElementById("formulario_registro").reset();
-});
+            }
+        );
+    });                     
+}
+
 //-----------------contar palabras------------------------
 function contar_palabras_titulo(){
     //Obtenemos el texto del campo
