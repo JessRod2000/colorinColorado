@@ -10,7 +10,7 @@ body::-webkit-scrollbar-thumb{
   border-radius:5px;
 }
 #titulo{
-  color: #05926f;
+  color: #078061;
   font-size:1.7cm;
   font-family: 'Rampart One', cursive;
 	text-align: center;
@@ -53,11 +53,16 @@ body::-webkit-scrollbar-thumb{
   color: #ffffff;
   background-color: #31e6b8;
   border-radius: 6px;
-	border: 2px solid #31e6b8;
+	border: none;
 }
 .boton_categoria:hover{
-  color: #ffffff;;
-  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: #07c898;
+}
+.boton_categoria:focus{
+  color: #ffffff;
+  background-color: #07c898;
+  border-color: #07c898;
 }
 .boton_cerrar_sesion{
   display: inline-block;
