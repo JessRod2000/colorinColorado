@@ -10,7 +10,7 @@ body::-webkit-scrollbar-thumb{
   border-radius:5px;
 }
 #titulo{
-  color: #05926f;
+  color: #078061;
   font-size:1.7cm;
   font-family: 'Rampart One', cursive;
 	text-align: center;
@@ -22,7 +22,6 @@ body::-webkit-scrollbar-thumb{
   text-align: left;
   font-size: 0.65cm;
   padding:1.8%;
-  min-width: 580px;
   background-color: #07c898;
 }
 .boton_atras{
@@ -40,6 +39,46 @@ body::-webkit-scrollbar-thumb{
   color: #1883ba;
   background-color: #ffffff;
 }
+.barra_categorias{
+  background-color: #31e6b8;
+}
+.boton_categoria{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 7px;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: #31e6b8;
+  border-radius: 6px;
+	border: none;
+}
+.boton_categoria:hover{
+  color: #ffffff;
+  background-color: #07c898;
+}
+.boton_categoria:focus{
+  color: #ffffff;
+  background-color: #07c898;
+  border-color: #07c898;
+}
+.boton_cerrar_sesion{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #08374e;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #08374e;
+}
+.boton_cerrar_sesion:hover{
+  background-color: #a9cfe2;
+}
 .boton_cuento{
   width:250px;
   font-family: 'Arima Madurai', cursive;
@@ -50,10 +89,10 @@ body::-webkit-scrollbar-thumb{
   font-weight: 600;
   font-size: 0.53cm;
   color: #ffffff;
-  background-color: #2b614f;
+  background-color: #07c898;
   border-radius: 5px;
-	border: 2px solid #078061;
-   }
+  border: 2px solid #078061;
+}
   .boton_cuento:hover{
     color: #1883ba;
     background-color: #ffffff;
@@ -66,21 +105,30 @@ h1{
   font-family: 'Arima Madurai', cursive;
 }
 
+#botonCerr{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
 .general{
   min-width: 100%;
   max-height: 100%;
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 580px) {
-  body{
-    margin-top: 4rem;
+
+.textoHeader{
+  display: inline-block;
+}
+@media screen and (max-width:990px){
+  .textoHeader{
+    display: none;
   }
-  .header{
-    min-width: 100%;
-  }
-  .titulo{
+}
+@media screen and (max-width: 610px) {
+  #titulo{
    font-size: 0.8cm;
+   margin-top: 10px;
   }
   .boton_atras{
     font-size: 15px;
@@ -93,4 +141,13 @@ h1{
   #logo{
   height: 60px;
   }
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  } 
+  .boton_categoria{
+    font-size: 20px;
+  }
+  
 }
