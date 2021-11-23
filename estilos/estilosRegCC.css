@@ -102,12 +102,27 @@ input[type="submit"]{
     display: inline-block;
     padding-left: 4%;
 }
+
+.seleccionar-archivo{
+  color: #045d5d;
+    border: 2px solid #000;
+    background-color: #ffffff ;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 17px;
+    padding: 6px;
+    border-radius: 6px;
+    margin-top:9px;
+    display:inline-block;
+    
+}
 .elegir-archivo{ /*alinear input file con la etiqueta imagen*/
   margin-top: 15px;
   font-size:12pt;
   font-family: 'Arima Madurai', cursive;
   color: #045d5d;
+  display:inline-block;
 }
+
 #categorias{
   font-size:15pt;
   font-family: 'Arima Madurai', cursive;
@@ -132,7 +147,7 @@ input.elegir-archivo{
 
 #botonCerr{
   display: inline-block;
-  float: right;
+  float:right;
   margin-top: 13px;
 }
 
@@ -188,5 +203,7 @@ input.elegir-archivo{
       font-family: 'Arima Madurai', cursive;
       color: #045d5d;
     }
-    
+    .button{
+      min-width: fit-content;
+    }
   }

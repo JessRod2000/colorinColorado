@@ -17,7 +17,7 @@ const btnElegido = document.getElementById("");
 document.getElementById("Fabulas").onclick = async(e) =>{
     const coleccionFabula = await getCuentosFabula();
     var numActual=1;
-    btnFabulas.style.backgroundColor="#07c898";
+    btnFabulas.style.backgroundColor="#078061";
     btnFabulas.style.color="#fbfcfc";
     btnFantasia.style.backgroundColor="transparent";
     btnFantasia.style.color="#00aae4";
@@ -63,7 +63,7 @@ document.getElementById("Fabulas").onclick = async(e) =>{
 document.getElementById("Fantasia").onclick = async(e) =>{
     const coleccionFantasia = await getCuentosFantasia();
     var numActual=1;
-    btnFantasia.style.backgroundColor="#07c898";
+    btnFantasia.style.backgroundColor="#078061";
     btnFantasia.style.color="#fbfcfc";
     btnFabulas.style.backgroundColor="transparent";
     btnFabulas.style.color="#00aae4";
@@ -109,7 +109,7 @@ document.getElementById("Fantasia").onclick = async(e) =>{
 document.getElementById("Clasicos").onclick = async(e) =>{
     const coleccionClasicos = await getCuentosClasicos();
     var numActual=1;
-    btnClasicos.style.backgroundColor="#07c898";
+    btnClasicos.style.backgroundColor="#078061";
     btnClasicos.style.color="#fbfcfc";
     btnFabulas.style.backgroundColor="transparent";
     btnFabulas.style.color="#00aae4";

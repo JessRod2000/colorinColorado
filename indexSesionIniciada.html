@@ -11,11 +11,11 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body onload="verificarUsuario()">
   <div class="general">
     <header >
       <div class="cabecera">
-     <a  href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+     <a title="Cuentos cortos" href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
        <div class="textoHeader">Curso de Lectura de Comprensión</div>
        <div id="botonesAdmin-Cerr">
         <a class="boton_administrar" href="administrarContenido.html">Administrar contenido</a>
@@ -28,8 +28,6 @@
    <div id="titulo">
       Colorín Colorado
     </div>
-  
-
 	<div align="center" style="padding-bottom: 30px; margin-top: 35px;">
     <a href="CuentosCortosSesionIniciada.html"> <img src="iconos/cuentosCortos.png" height="250px" alt="cortitos" /></a>
     
@@ -40,6 +38,7 @@
 
   </div>
  
+    </script>
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
   
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>  
@@ -47,7 +46,7 @@
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
-
+  
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -70,6 +69,7 @@
     getAuth,
     signInWithEmailAndPassword,
     signOut,
+    onAuthStateChanged,
   } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -104,6 +104,19 @@
         console.log(error);
       });
   }
+  function verificarUsuario() {
+      const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          console.log('logeado')
+          const uid = user.uid;
+        } else {
+          console.log('no logeado');
+          window.location.href = 'index.html';
+        }
+      });
+    }
+  window.verificarUsuario = verificarUsuario;
   window.logout = logout;
 </script>
 </div>
