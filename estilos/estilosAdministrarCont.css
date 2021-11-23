@@ -100,5 +100,12 @@ font-family: 'Rampart One', cursive;
   .boton_registro{
     font-size: 23px;
   }
+  .contenedor{
+    width: 88%;
+    margin-left: 5%;
+    margin-right: 3%;
+    margin-top: 4.5%;
+    padding: 8px;
+   }
   
 }
