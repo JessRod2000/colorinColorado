@@ -47,9 +47,13 @@ body{
     background-color: #a9cfe2;
   }
   
-.boton_registro{
-    text-decoration: none;
-  font-family: 'Rampart One', cursive;
+  .boton_cerrar_sesion:hover{
+    background-color: #2480ad;
+  }
+  
+  .boton_registro{
+    font-family: 'Rampart One', cursive;
+    width:42%;
     padding: 5px;
     margin-top: 20px;
     font-weight: 600;
@@ -58,10 +62,6 @@ body{
     background-color: #0000;
     border-radius: 5px;
     border: 2px solid #1799c0;
-  }
-  
-  .boton_registro:hover{
-    background-color: #a9cfe2;
   }
   #botonCerr{
     display: inline-block;
@@ -76,6 +76,39 @@ body{
     .textoHeader{
       display: none;
     }
+    .titulo{
+      font-size: 0.8cm;
+     }
+     .boton_atras{
+       font-size: 15px;
+       border-radius: 3px;
+       padding: 3px;
+    }
+    .cabecera{
+     font-size: 0.4cm;
+     }
+     #logo{
+     height: 60px;
+     }
+     .boton_cerrar_sesion{
+       padding: 2px;
+       margin-top: 10px;
+       font-size: 13.5px;
+       min-width: fit-content;
+     } 
+     .boton_registro{
+       font-size: 23px;
+       display: block;
+      margin-left: auto;
+      margin-right: auto;
+     }
+     .contenedor{
+       width: 88%;
+       margin-left: 5%;
+       margin-right: 3%;
+       margin-top: 4.5%;
+       padding: 8px;
+      }
   }
   @media screen and (max-width: 610px) {
     .titulo{
@@ -100,5 +133,12 @@ body{
     .boton_registro{
       font-size: 23px;
     }
+    .contenedor{
+      width: 88%;
+      margin-left: 5%;
+      margin-right: 3%;
+      margin-top: 4.5%;
+      padding: 8px;
+     }
     
   }
