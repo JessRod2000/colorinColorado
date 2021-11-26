@@ -59,14 +59,14 @@ body::-webkit-scrollbar-thumb{
     padding: 9px;
     font-weight: 600;
     font-size: 18px;
-    color: #ffffff;
-    background-color: #07657a;
-    border-radius: 6px;
-    border: 2px solid #06303a;
-    float:right;
+    color: white;
+    background-color: #0000;
+    border-radius: 5px;
+    border: 2px solid white;
+    float: right;
   }
-  .boton_cierreSesion:hover{
-    background-color: #a9cfe2;
+  .boton_cerrar_sesion:hover{
+    background-color: #2480ad;
   }
   .footer{
     text-align: center;

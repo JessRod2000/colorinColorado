@@ -1,192 +1,232 @@
 
 body{
-    overflow-x: hidden;
-  }
-  body::-webkit-scrollbar {
-    width: 10px;
-  }
-  body::-webkit-scrollbar-thumb{
-    background: #0aa9da;
-    border-radius:5px;
-  }
-  .boton_atras{
-      text-decoration: none;
-      font-family: 'Arima Madurai', cursive;
-      padding: 9px;
-      font-weight: 600;
-      font-size: 18px;
-      color: #ffffff;
-      background-color: #0aa9da;
-      border-radius: 6px;
-      border: 2px solid #058080;
-    }
-    .boton_atras:hover{
-      color: #1883ba;
-      background-color: #ffffff;
-    }
-    .cabecera{
-      font-family: 'Arima Madurai', cursive;
-      text-align: left;
-      font-size: 0.65cm;
-      padding:1.8%;
-      background-color: #0aa9da;
-    }
-  .titulo{
-    color: #0c708f;
-    font-size:1.3cm;
-    font-family: 'Rampart One', cursive;
-      text-align: center;
-    margin: 1px;
-  }
-    .general{
-    min-width: 100%;
-    max-height: 100%;
-  }
-  .formulario_registro{
-    text-align: center;
-  }
-  .contenedor{
-    width: 50%;
-    margin-left: 26%;
-    margin-right: 26%;
-    margin-top: 2%;
-    border-radius: 8px;
-    border: 3px solid #1799c0;
-    padding: 20px;
+  overflow-x: hidden;
 }
-input[type="text"]{
-    font-size: 15px;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 6px;
+body::-webkit-scrollbar {
+  width: 10px;
 }
-input[type="submit"]{
-    width: 30%;
+body::-webkit-scrollbar-thumb{
+  background: #0aa9da;
+  border-radius:5px;
 }
-.formulario_input{
-    font-size: 15px;
-    padding: 6px;
-    border: 2px solid #000;
-    border-radius: 6px;
-    margin-top:9px;
-}
-.input-contenedor{ /*reemplazado por los class="row"*/
-    margin-bottom: 15px;
-    display: inline;
-    width: 100%;
-}
-
-.button{
-    border: 2px solid #036666;
-    width: 80%;
-    font-size: 20px;
-    padding: 8px;
-    margin:8px;
+.boton_atras{
+    text-decoration: none;
     font-family: 'Arima Madurai', cursive;
-    color: white;
-    background-color: #0c708f;
-    border-radius: 6px;
-}
-.button:hover{
+    padding: 9px;
+    font-weight: 600;
+    font-size: 18px;
     color: #ffffff;
-    border: 2px solid #000;
-    background-color: #1d9fc7;
-}
-
-#etiquetas{
-    color: #045d5d;
-    font-size:0.65cm;
+    background-color: #0aa9da;
+    border-radius: 6px;
+    border: 2px solid #058080;
+  }
+  .boton_atras:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
+  .cabecera{
     font-family: 'Arima Madurai', cursive;
     text-align: left;
-    margin: 10px;
-    display: inline-block;
-    padding-left: 4%;
+    font-size: 0.65cm;
+    padding:1.8%;
+    background-color: #0aa9da;
+  }
+.titulo{
+  color: #0c708f;
+  font-size:1.3cm;
+  font-family: 'Rampart One', cursive;
+    text-align: center;
+  margin: 1px;
 }
-.elegir-archivo{ /*alinear input file con la etiqueta imagen*/
-  margin-top: 15px;
-  font-size:12pt;
-  font-family: 'Arima Madurai', cursive;
-  color: #045d5d;
+  .general{
+  min-width: 100%;
+  max-height: 100%;
 }
-#categorias{
-  font-size:15pt;
-  font-family: 'Arima Madurai', cursive;
-  color: #045d5d;
+.formulario_registro{
+  text-align: center;
 }
-input.elegir-archivo{
-  border-radius: 4px;
- }
- .input-contenedor #titulobox{ 
+.contenedor{
+  width: 50%;
+  margin-left: 26%;
+  margin-right: 26%;
+  margin-top: 2%;
+  border-radius: 8px;
+  border: 3px solid #1799c0;
+  padding: 20px;
+}
+input[type="text"]{
+  font-size: 15px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+input[type="submit"]{
+  width: 30%;
+}
+.formulario_input{
+  font-size: 15px;
+  padding: 6px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  margin-top:9px;
+}
+.input-contenedor{ /*reemplazado por los class="row"*/
+  margin-bottom: 15px;
+  display: inline;
   width: 100%;
-}
-.input-contenedor #contenidobox{ 
-  width: 100%;
-  margin-left: 3px;
-}
-.input-contenedor .elegir-archivo{ 
-  width: 100%;
-}
-.general{
-  margin-bottom: 20px;
 }
 
-#botonCerr{
+.boton_cerrarSesion{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid white;
   display: inline-block;
   float: right;
   margin-top: 13px;
+}
+.boton_cerrarSesion:hover{
+  background-color: #2480ad;
 }
 
 .textoHeader{
   display: inline-block;
 }
+.button{
+  border: 2px solid #036666;
+  width: 80%;
+  font-size: 20px;
+  padding: 8px;
+  margin:8px;
+  font-family: 'Arima Madurai', cursive;
+  color: white;
+  background-color: #0c708f;
+  border-radius: 6px;
+}
+.button:hover{
+  color: #ffffff;
+  border: 2px solid #000;
+  background-color: #1d9fc7;
+}
+.button{
+  min-width: fit-content;
+}
+
+#etiquetas{
+  color: #045d5d;
+  font-size:0.65cm;
+  font-family: 'Arima Madurai', cursive;
+  text-align: left;
+  margin: 10px;
+  display: inline-block;
+  padding-left: 4%;
+}
+.seleccionar-archivo{
+  color: #045d5d;
+    border: 2px solid #000;
+    background-color: #ffffff ;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 17px;
+    padding: 6px;
+    border-radius: 6px;
+    margin-top:9px;
+    display:inline-block;
+
+}
+.elegir-archivo{ /*alinear input file con la etiqueta imagen*/
+margin-top: 15px;
+font-size:12pt;
+font-family: 'Arima Madurai', cursive;
+color: #045d5d;
+display:inline-block;
+}
+#categorias{
+font-size:15pt;
+font-family: 'Arima Madurai', cursive;
+color: #045d5d;
+}
+input.elegir-archivo{
+border-radius: 4px;
+}
+.input-contenedor #titulobox{ 
+width: 100%;
+}
+.input-contenedor #contenidobox{ 
+width: 100%;
+margin-left: 3px;
+}
+.input-contenedor .elegir-archivo{ 
+width: 100%;
+}
+.general{
+margin-bottom: 20px;
+}
+
+#botonCerr{
+display: inline-block;
+float: right;
+margin-top: 13px;
+}
+
+.textoHeader{
+display: inline-block;
+}
 
 @media screen and (max-width:990px){
-  .textoHeader{
-    display: none;
+.textoHeader{
+  display: none;
+}
+}
+@media screen and (max-width: 900px) {
+  input[type="text"]{
+   font-size: 0.4cm;
+   padding: 5px;
+   width: 100%;
+}
+input[type="submit"]{
+font-size: 0.45cm;
+padding: 5px;
+margin-left: 3.5%;
+}
+  .contenedor{
+      width: 88%;
+      margin-left: 5%;
+  margin-right: 3%;
+  margin-top: 4.5%;
+  border-radius: 8px;
+  border: 3px solid #1799c0;
+  padding: 8px;
+     }
+  .header{
+    min-width: 100%;
+  }
+  .titulo{
+       font-size: 0.75cm;
+       margin-top: 0px;
+  }
+  .boton_atras{
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 3px;
+ }
+ .cabecera{
+  font-size: 0.4cm;
+  }
+  #campos{
+    font-size: 20px;
+  }
+  #categorias{
+    font-size:13pt;
+    font-family: 'Arima Madurai', cursive;
+    color: #045d5d;
+  }
+  .button{
+    min-width: fit-content;
   }
 }
-  @media screen and (max-width: 900px) {
-    input[type="text"]{
-     font-size: 0.4cm;
-     padding: 5px;
-     width: 100%;
-  }
-  input[type="submit"]{
-  font-size: 0.45cm;
-  padding: 5px;
-  margin-left: 3.5%;
-  }
-    .contenedor{
-        width: 88%;
-        margin-left: 5%;
-    margin-right: 3%;
-    margin-top: 4.5%;
-    border-radius: 8px;
-    border: 3px solid #1799c0;
-    padding: 8px;
-       }
-    .header{
-      min-width: 100%;
-    }
-    .titulo{
-         font-size: 0.8cm;
-         margin-top: 0px;
-    }
-    .boton_atras{
-      font-size: 15px;
-      border-radius: 3px;
-      padding: 3px;
-   }
-   .cabecera{
-    font-size: 0.4cm;
-    }
-    #campos{
-      font-size: 20px;
-    }
-    #categorias{
-      font-size:13pt;
-      font-family: 'Arima Madurai', cursive;
-      color: #045d5d;
-    }
-    
-  }
