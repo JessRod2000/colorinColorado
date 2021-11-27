@@ -1,0 +1,150 @@
+body{
+  overflow-x: hidden;
+  width: 100%;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background: #10BCE3;
+  border-radius:5px;
+}
+#titulo{
+text-align: center;
+color: #09809b;
+font-family: 'Rampart One', cursive;
+font-size: 1.7cm;
+} 
+.cabecera{
+font-family: 'Arima Madurai', cursive;
+text-align: left;
+font-size: 0.65cm;
+padding:1.8%;
+background-color: #10BCE3;
+}
+.boton_personalizado{
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 30px;
+  color: #1883ba;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #015e75;
+}
+.boton_personalizado:hover{
+  background-color: #a9cfe2;
+}
+
+#botonesAdmin-Cerr, .boton_iniciar_sesion{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
+.boton_cerrar_sesion, .boton_iniciar_sesion{
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Arima Madurai', cursive;
+    padding: 3px;
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    background-color: #0000;
+    border-radius: 5px;
+    border: 2px solid white;
+    
+}
+.boton_cerrar_sesion:hover , .boton_iniciar_sesion:hover{
+  background-color: #2480ad;
+}
+
+.boton_administrar{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  font-weight: 600;
+  font-size: 25px;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+.boton_administrar:hover{
+  background-color: #2480ad;
+}
+.footer{
+  text-align: center;
+  padding-right:10%;
+  padding-left: 10%;
+  margin-bottom: 10px;
+  font-size:0.53cm ;
+  font-family: 'Arima Madurai', cursive;
+  min-width: 80%;
+  max-height: auto;
+  margin-bottom: 3%;
+}
+.general{
+  min-width: 100%;
+  max-height: 100%;
+}
+.textoHeader{
+  display: inline-block;
+}
+#botonInic{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
+@media screen and (max-width:990px){
+  .textoHeader{
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cabecera{
+    font-size: 0.4cm;
+  }
+  #logo{
+    height: 60px;
+  }
+  .logoEsp{
+    width: 30%;
+  }
+  #titulo{
+    font-size: 0.8cm;
+  }
+  #imagen{
+    height: 180px;
+  }
+  .boton_personalizado{
+    font-size: 25px;
+  }
+  .footer{
+    font-size: 0.34cm;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .boton_administrar{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .boton_cerrar_sesion {
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .boton_iniciar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  } 
+ 
+}
