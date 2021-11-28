@@ -97,8 +97,8 @@
                 <div id="infoImg" class="elegir-archivo">No se eligió ningún archivo</div>
             </div>
         </div>
-
-        
+           
+             
         <div align ="center">
             <input type="submit" class="button" value="Registrar">
         </div>
@@ -108,6 +108,111 @@
 
     
     </section>
+
+    <script>
+        function cambiar(){
+                        var pdrs = document.getElementById('elegirArchivo').files[0].name;
+                        document.getElementById('infoImg').innerHTML =pdrs;
+                    }
+    function validateFile(){
+                                var nameFile = document.getElementById("elegirArchivo").files[0].name;
+                                var extension = nameFile.split('.').pop();
+                                if(extension == "jpg" || extension == "png" || extension == "jpeg"){
+                                    return true;
+                                }else{
+                                    alert("¡Doumento no válido, el cuento no fue registrado!");
+                                    var inputImage = document.getElementById("elegirArchivo");
+                                    inputImage.value = '';
+                                    return false;
+                                }
+
+                            }
+    function validateimg(ctrl) { 
+        var fileUpload = ctrl;
+            if (typeof (fileUpload.files) != "undefined") {
+                var reader = new FileReader();
+                reader.readAsDataURL(fileUpload.files[0]);
+                reader.onload = function (e) {
+                    var image = new Image();
+                    image.src = e.target.result;
+                    image.onload = function () {
+                        var height = this.height;
+                        var width = this.width;
+                        if ((height - width) >=10 || (width - height) >=10)  {
+                            alert("Imagen no valido, alto y ancho distintos en valor ");
+                            var inputImage = document.getElementById("elegirArchivo");
+                            inputImage.value = '';
+                            return false;
+                        }else{
+                            alert("Imagen cargada, alto y ancho validos");
+                            return true;
+                        }
+                    };
+                }
+            } else {
+                alert("This browser does not support HTML5.");
+                return false;
+            }
+    }
+    </script>
+
+<script type ="text/javascript">
+    function validacion(){
+        var titulobox = document.getElementById("titulobox").value;
+        var text1 = document.getElementById("text1");
+        var text2 = document.getElementById("text2");
+        var pattern = /^[A-Za-z\d\s\u00fc\u003f\u00bf\u0021\u00a1\u00f1\u00dc\u002c\u00b4\u00c1\u00e1\u00c9\u00e9\u00cd\u00ed\u00d3\u00f3\u00da\u00fa]+$/;
+        var existe = "false";
+        if(existe=="false"){
+            text2.innerHTML = "";
+        }
+        if(titulobox.match(pattern)){
+            text1.innerHTML = "";
+        }
+        
+        else{
+            text1.innerHTML = "Solo se aceptan caracteres alfanuméricos, ¿, ?, ¡, !";
+
+        }
+        if(titulobox == ""){
+            text1.innerHTML = "";
+        }
+        dbfirestore.collection('Historia').get().then((snapshot)=>{
+                snapshot.docs.forEach(doc=>{
+                    if(titulobox == doc.data().TituloCuento){
+                        text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                        existe = "true";
+                    }
+                })
+                
+            })
+            
+            dbfirestore.collection('Leyendas').get().then((snapshot)=>{
+                snapshot.docs.forEach(doc=>{
+                    if(titulobox == doc.data().TituloCuento){
+                        text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                        existe = "true";
+                    }
+                    
+                })
+                
+            })
+            dbfirestore.collection('Terror').get().then((snapshot)=>{
+                snapshot.docs.forEach(doc=>{
+                    if(titulobox == doc.data().TituloCuento){
+                        text2.innerHTML = "El titulo ya se encuentra registrado en la bd";
+                        existe = "true";
+                    }
+                    
+                })
+                
+            })
+            if(existe=="true"){
+                existe=="false";
+            }
+    
+    }
+</script>
 
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
