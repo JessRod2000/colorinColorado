@@ -98,7 +98,34 @@
             </div>
         </div>
            
-             
+        <div class="row"style="margin: 8px;">
+
+            <div class="col-md-3" id="etiquetas">
+                <div id="campos" >Actividad:</div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor" >
+                    <input type="url" id="linkactividad"  name="linkactividad" size="48" placeholder="Copia el link de la actividad del cuento" style='display:inline-table' required>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin:8px;">
+            <div class="col-md-3" id="etiquetas">
+                <div id="campos">Glosario: </div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor">
+                    <textarea type="text" id="glosario" placeholder="Escriba el glosario del cuento" class="formulario_input"name="glosario" 
+                rows="4" cols="50" required onkeyup="validacion()"></textarea>
+                <span id="text5"></span>
+                </div>
+                
+            </div>
+        </div>
+        
         <div align ="center">
             <input type="submit" class="button" value="Registrar">
         </div>
@@ -291,6 +318,6 @@
     window.logout = logout;
   </script>
     <!-- CUSTOM CODE -->
-    <script src="registrocuentolargo.js"></script> 
+    <script src="registroCuentoLargo.js"></script> 
 </body>
 </html>

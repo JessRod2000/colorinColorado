@@ -1,7 +1,7 @@
 const dbstorage = firebase.storage();
 const dbfirestore = firebase.firestore();
 
-var ImgName, ImgUrl, Categoria, TituloCuento, ContenidoCuento, imagen;
+var ImgName, ImgUrl, Categoria, TituloCuento, ContenidoCuento, imagen,link, glosario;
 var files = [];
 var reader;
 var controlar = "true";
@@ -20,6 +20,8 @@ document.getElementById("formulario_registro").addEventListener("submit", functi
     ContenidoCuento = document.getElementById('contenidobox').value;
     Categoria = document.getElementById("categorias").value;
     imagen = document.getElementById('elegirArchivo').files[0];
+    link = document.getElementById('linkactividad').value;
+    glosario = document.getElementById('glosario').value;
     pruebaRegistrar();   
     document.getElementById("formulario_registro").reset();
 });
@@ -29,7 +31,7 @@ async function pruebaRegistrar(){
 
 if (controlar == "true") {
     await obtenerUrl();
-    const response = dbfirestore.collection(Categoria).doc().set({ TituloCuento, ContenidoCuento, ImgUrl});
+    const response = dbfirestore.collection(Categoria).doc().set({ TituloCuento, ContenidoCuento, ImgUrl,link,glosario});
     alert('Cuento registrado');
 } else {
     alert("arregle los campos");
