@@ -54,15 +54,12 @@ body::-webkit-scrollbar-thumb{
   background-color: #31e6b8;
   border-radius: 6px;
 	border: none;
+  border: 1.5px solid #07c898;
 }
 .boton_categoria:hover{
+  border: 1.5px solid white;
   color: #ffffff;
-  background-color: #07c898;
-}
-.boton_categoria:focus{
-  color: #ffffff;
-  background-color: #07c898;
-  border-color: #07c898;
+  background-color: #31e6b8;
 }
 .boton_cerrar_sesion{
   display: inline-block;
@@ -71,13 +68,13 @@ body::-webkit-scrollbar-thumb{
   padding: 3px;
   font-weight: 600;
   font-size: 25px;
-  color: #08374e;
+  color: white;
   background-color: #0000;
   border-radius: 5px;
-  border: 2px solid #08374e;
+  border: 2px solid white;
 }
 .boton_cerrar_sesion:hover{
-  background-color: #a9cfe2;
+  background-color: #078061;
 }
 .boton_cuento{
   width:250px;
@@ -94,7 +91,7 @@ body::-webkit-scrollbar-thumb{
   border: 2px solid #078061;
 }
   .boton_cuento:hover{
-    color: #1883ba;
+    color: #ba1818;
     background-color: #ffffff;
   }
 #subtitulo{

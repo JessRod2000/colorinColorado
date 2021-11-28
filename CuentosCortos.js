@@ -11,15 +11,60 @@ const getCuentosFantasia = () => db.collection('Fantasia').get();
 const btnFabulas = document.getElementById("Fabulas");
 const btnFantasia = document.getElementById("Fantasia");
 const btnClasicos = document.getElementById("Clasicos");
+window.addEventListener('DOMContentLoaded', async(e) =>{
+    const coleccionFabula = await getCuentosFabula();
+    var numActual=1;
+    btnFabulas.style.backgroundColor="#07c898";
+    btnFabulas.style.color="#fbfcfc";
+    btnFantasia.style.backgroundColor="#31e6b8";
+    btnFantasia.style.color="#00aae4";
+    btnClasicos.style.backgroundColor="#31e6b8";
+    btnClasicos.style.color="#00aae4";
+    primeraCol.innerHTML = ``;
+    segundaCol.innerHTML = ``;
+    terceraCol.innerHTML = ``;
 
+    coleccionFabula.forEach(doc =>{
+        if(numActual==1){
+            primeraCol.innerHTML += `<div>
+            <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
+            
+            <form action="Fabulas.html" method="GET">
+            <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
+            </form>  
+            `
+            numActual=2;
+        }else{
+            if(numActual==2){
+                segundaCol.innerHTML += `<div>
+                <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
+                
+                <form action="Fabulas.html" method="GET">
+                <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
+                </form>  
+                `
+                numActual=3;
+            }else{
+                terceraCol.innerHTML += `<div>
+                <img src=${doc.data().ImgUrl} height="200px" style="margin-bottom:10px ; margin-top: 10px">
+                
+                <form action="Fabulas.html" method="GET">
+                <input type="submit" id="btnTitulo" class="boton_cuento" name="${doc.data().ImgUrl}" value="${doc.data().TituloCuento}"/>
+                </form>  
+                `
+                numActual=1;
+            }
+        }
+    })
+})
 document.getElementById("Fabulas").onclick = async(e) =>{
     const coleccionFabula = await getCuentosFabula();
     var numActual=1;
     btnFabulas.style.backgroundColor="#07c898";
     btnFabulas.style.color="#fbfcfc";
-    btnFantasia.style.backgroundColor="transparent";
+    btnFantasia.style.backgroundColor="#31e6b8";
     btnFantasia.style.color="#00aae4";
-    btnClasicos.style.backgroundColor="transparent";
+    btnClasicos.style.backgroundColor="#31e6b8";
     btnClasicos.style.color="#00aae4";
     primeraCol.innerHTML = ``;
     segundaCol.innerHTML = ``;
@@ -63,9 +108,9 @@ document.getElementById("Fantasia").onclick = async(e) =>{
     var numActual=1;
     btnFantasia.style.backgroundColor="#07c898";
     btnFantasia.style.color="#fbfcfc";
-    btnFabulas.style.backgroundColor="transparent";
+    btnFabulas.style.backgroundColor="#31e6b8";
     btnFabulas.style.color="#00aae4";
-    btnClasicos.style.backgroundColor="transparent";
+    btnClasicos.style.backgroundColor="#31e6b8";
     btnClasicos.style.color="#00aae4";
     primeraCol.innerHTML = ``;
     segundaCol.innerHTML = ``;
@@ -109,9 +154,9 @@ document.getElementById("Clasicos").onclick = async(e) =>{
     var numActual=1;
     btnClasicos.style.backgroundColor="#07c898";
     btnClasicos.style.color="#00aae4";
-    btnFabulas.style.backgroundColor="transparent";
+    btnFabulas.style.backgroundColor="#31e6b8";
     btnFabulas.style.color="#00aae4";
-    btnFantasia.style.backgroundColor="transparent";
+    btnFantasia.style.backgroundColor="#31e6b8";
     btnFantasia.style.color="#00aae4";
     primeraCol.innerHTML = ``;
     segundaCol.innerHTML = ``;

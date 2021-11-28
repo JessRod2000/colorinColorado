@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,13 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="mod_body" onload="verificarUsuario()">
+<body onload="verificarUsuario()">
     <div class="general">
         <header>
             <div class="cabecera">
-                <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
-                Curso de Lectura de Comprensión
-            </div>
+                <a title="Cuentos cortos" href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                  <div class="textoHeader">Curso de Lectura de Comprensión</div>
+                  <div id="botonesAdmin-Cerr">
+                   <button id="logoutButton" class="boton_administrar" onclick="logout()"> <a style="color: white;"href=" " >Cerrar Sesión</a></button>
+                  </div>
+                   
         </header>
         <div style="padding-left: 35px; padding-top: 25px;">
             <a class="boton_atras" href="administrarContenido.html">Atrás</a>
@@ -36,7 +39,7 @@
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor" >
-                    <input type="text" id="titulobox"  name="titulo" size="48" autocomplete="off" required onkeyup="validacion()">
+                    <input type="text" id="titulobox"  name="titulo" size="48" placeholder="Escriba aquí el título del cuento" autocomplete="off" required onkeyup="validacion()">
                 </div>
                 <div>
                     <span id="text1"></span>
@@ -51,7 +54,7 @@
                 <div id="campos">Categoría: </div>
             </div>
             <div class="col-md-7">
-                <div class="input-contenedor">
+                <div class="input-contenedor" >
                     
                     <select  name="combobox" id="categorias" class="formulario_input">
                         <option value="Fabulas">Fábulas</option>
@@ -68,7 +71,7 @@
             </div>
             <div class="col-md-7">
                 <div class="input-contenedor">
-                    <textarea id="contenidobox" class="formulario_input"name="contenido" 
+                    <textarea id="contenidobox" placeholder="Escriba el contenido del cuento" class="formulario_input"name="contenido" 
                 rows="4" cols="50" required></textarea>
                 <span id="text3"></span>
                 </div>
@@ -77,24 +80,25 @@
         </div>
 
     
-        <div class="row" style="margin: 8px; display: inline;">
+        <div class="row" style="margin: 8px;display: inline;">
 
             <div class="col-md-3" id="etiquetas">
                 <div id="campos">Imagen:</div>
             </div>
             <div class="col-md-7" style="display: inline;">
-                <div class="input-contenedor" >
+                <div class="input-contenedor"> 
                     <label for="elegirArchivo"  class="seleccionar-archivo">
                         <i class="fas fa.cloud-upload-alt">Seleccionar archivo</i>
                     </label>
-                    <input type="file" name="file"
-               accept=".png,.jpg, .jpeg" id="elegirArchivo" onchange = "validateimg (this), cambiar(), validateFile()" style='display:none;' required/>
-                </div>
+                    <input  type="file" name="file"
+                    accept="image/*" id="elegirArchivo" onchange="validateimg(this), cambiar(), validateFile()" style='display:none;' required/>
+                    
+                </div> <!-- accept es para validar algunos archivos. image/x-png, image/gif, image/jpg -->
                 <div id="infoImg" class="elegir-archivo">No se eligió ningún archivo</div>
             </div>
         </div>
            
-
+             
         <div align ="center">
             <input type="submit" class="button" value="Registrar">
         </div>
@@ -106,7 +110,7 @@
     </section>
 
     <script>
-    function cambiar(){
+        function cambiar(){
                         var pdrs = document.getElementById('elegirArchivo').files[0].name;
                         document.getElementById('infoImg').innerHTML =pdrs;
                     }
@@ -121,7 +125,7 @@
                                     inputImage.value = '';
                                     return false;
                                 }
-                        
+
                             }
     function validateimg(ctrl) { 
         var fileUpload = ctrl;
@@ -135,12 +139,12 @@
                         var height = this.height;
                         var width = this.width;
                         if ((height - width) >=10 || (width - height) >=10)  {
-                            alert("Imagen no valido, Alto y Ancho distintos en valor ");
+                            alert("Imagen no valido, alto y ancho distintos en valor ");
                             var inputImage = document.getElementById("elegirArchivo");
                             inputImage.value = '';
                             return false;
                         }else{
-                            alert("Imagen cargada, Alto y Ancho validos");
+                            alert("Imagen cargada, alto y ancho validos");
                             return true;
                         }
                     };
@@ -278,7 +282,7 @@
             console.log('logeado')
             const uid = user.uid;
           } else {
-            console.log('no logeado');
+            alert('Deberá iniciar sesión para tener accesos especiales.');
             window.location.href = 'index.html';
           }
         });

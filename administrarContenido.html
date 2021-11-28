@@ -4,29 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administrar Contenido</title>
-  <link rel="stylesheet" type="text/css" href="estilos/estilosAdministrarCont.css">   
+  <link rel="stylesheet" type="text/css" href="estilos/estilosadministrarcont.css">   
   <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
   
   <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
 </head>
-<body>
-  <!-- Metodo para evitar que se entre desde url -->
-  <script type="text/javascript">
-    var urlanterior = document.referrer;
-    if(urlanterior == ''){
-    alert('Usted no tiene acceso a esta página!');
-    window.location.href = "index.html";
-    }
-    </script>
-      <!-- fin de metodo -->
+<body onload="verificarUsuario()">
   <header>
     <div class="cabecera">    
      <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
      <div class="textoHeader">Curso de Lectura de Comprensión</div>
      <div id="botonCerr">
-      <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()">Cerrar Sesion</button>
+      <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()">Cerrar Sesión</button>
      </div>
    </header>
    <div style="padding-left: 35px; padding-top: 25px;">
@@ -35,8 +26,11 @@
     <section>
   <div align="center" style="padding-bottom: 30px; margin-top: 35px;">
     
+    <div align="center"style="padding-left: 35px; padding-top: 25px;  ">
+      <button  class="boton_registro" ><a style="color: #0c708f;" href="registroCuentoCorto.html">Registrar Cuento Corto</a></button>
+    </div>
     <div align="center"style="padding-left: 35px; padding-top: 25px;">
-      <a class="boton_registro" href="registroCuentoCorto.html">Registrar Cuento Corto</a>
+      <button  class="boton_registro"><a  style="color: #0c708f;"href="eliminarCuento.html">Eliminar Cuento </a></button>
     </div>
   </div>
   <script type="module">
@@ -88,7 +82,7 @@
             console.log('logeado')
             const uid = user.uid;
           } else {
-            console.log('no logeado');
+            alert('Deberá iniciar sesión para tener accesos especiales.');
             window.location.href = 'index.html';
           }
         });
