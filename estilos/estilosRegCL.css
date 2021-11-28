@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb{
   }
 .titulo{
   color: #0c708f;
-  font-size:1.3cm;
+  font-size:1.2cm;
   font-family: 'Rampart One', cursive;
     text-align: center;
   margin: 1px;
@@ -55,6 +55,12 @@ body::-webkit-scrollbar-thumb{
   padding: 20px;
 }
 input[type="text"]{
+  font-size: 15px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+input[type="url"]{
   font-size: 15px;
   padding: 10px;
   border: 2px solid #000;
@@ -88,7 +94,7 @@ input[type="submit"]{
   border-radius: 5px;
   border: 2px solid white;
   display: inline-block;
-  float: right;
+  float:right;
   margin-top: 13px;
 }
 .boton_cerrarSesion:hover{
@@ -161,10 +167,17 @@ width: 100%;
 width: 100%;
 margin-left: 3px;
 }
+.input-contenedor #linkactividad{ 
+  width: 100%;
+  margin-left: 3px;
+}
+.input-contenedor #glosario{ 
+  width: 100%;
+  margin-left: 3px;
+}
 .input-contenedor .elegir-archivo{ 
 width: 100%;
 }
-
 .general{
 margin-bottom: 20px;
 }
@@ -225,7 +238,7 @@ margin-left: 3.5%;
   #categorias{
     font-size:13pt;
     font-family: 'Arima Madurai', cursive;
-    color: #045d5d;
+    color: #0a1111;
   }
   .button{
     min-width: fit-content;

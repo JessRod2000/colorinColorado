@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+body{
+    overflow-x: hidden;
+    width: 100%;
+ }
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+body::-webkit-scrollbar-thumb{
+    background: #10BCE3;
+    border-radius:5px;
+}
+
+#boton{
+	font-family: 'Leckerli One', cursive;
+	font-size: large;
+}
+.cabecera{
+  font-family: 'Leckerli One', cursive;
+  text-align: left;
+  font-size: 0.75cm;
+  padding:1.95%;
+  background-color: #10BCE3;
+}
+
+.boton_registro{
+    text-decoration: none;
+	font-family: 'Rampart One', cursive;
+    padding: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #1883ba;
+    background-color: #0000;
+    border-radius: 5px;
+    border: 2px solid #1883ba;
+  }
+  
+  .boton_registro:hover{
+    background-color: #a9cfe2;
+  }
+  .boton_atras{
+    text-decoration: none;
+    padding: 9px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #07c898;
+    border-radius: 6px;
+    border: 2px solid #078061;
+  }
+  .boton_atras:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
+  .boton_cierreSesion{
+    text-decoration: none;
+  	font-family: 'Delius', cursive;
+    padding: 9px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    background-color: #0000;
+    border-radius: 5px;
+    border: 2px solid white;
+    float: right;
+  }
+  .boton_cerrar_sesion:hover{
+    background-color: #2480ad;
+  }
+  .footer{
+    text-align: center;
+    padding-right:10%;
+    padding-left: 10%;
+    margin-bottom: 10px;
+    font-size:x-large ;
+    font-family: 'Delius', cursive;
+    min-width: 80%;
+    max-height: auto;
+    margin-bottom: 3%;
+  }
+  .general{
+    min-width: 100%;
+    max-height: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    .cabecera{
+      font-size: 0.4cm;
+    }
+    #logo{
+      height: 60px;
+    }
+    #titulo{
+      font-size: 0.8cm;
+    }
+    #imagen{
+      height: 180px;
+    }
+    .boton_registro{
+      font-size: 25px;
+    }
+    .footer{
+      font-size: 0.34cm;
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+  }
