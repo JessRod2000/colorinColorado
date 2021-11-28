@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
 </head>
-<body>
+<body onload="verificarUsuario()">
   <header>
     <div class="cabecera">    
      <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
@@ -26,8 +26,14 @@
     <section>
   <div align="center" style="padding-bottom: 30px; margin-top: 35px;">
     
+    <div align="center"style="padding-left: 35px; padding-top: 25px;  ">
+      <button  class="boton_registro" ><a style="color: #0c708f;" href="registroCuentoCorto.html">Registrar Cuento Corto</a></button>
+    </div>
     <div align="center"style="padding-left: 35px; padding-top: 25px;">
-      <a class="boton_registro" href="registroCuentoCorto.html">Registrar Cuento Corto</a>
+      <button  class="boton_registro"><a  style="color: #0c708f;"href="registroCuentoLargo.html">Registrar Cuento Largo</a></button>
+    </div>
+    <div align="center"style="padding-left: 35px; padding-top: 25px;">
+      <button  class="boton_registro"><a  style="color: #0c708f;"href="eliminarCuento.html">Eliminar Cuento </a></button>
     </div>
   </div>
   <script type="module">
@@ -37,6 +43,7 @@
       getAuth,
       signInWithEmailAndPassword,
       signOut,
+      onAuthStateChanged,
     } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
@@ -71,6 +78,19 @@
           console.log(error);
         });
     }
+    function verificarUsuario() {
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            console.log('logeado')
+            const uid = user.uid;
+          } else {
+            alert('Deberá iniciar sesión para tener accesos especiales.');
+            window.location.href = 'index.html';
+          }
+        });
+      }
+    window.verificarUsuario = verificarUsuario;
     window.logout = logout;
   </script> 
 </section>
