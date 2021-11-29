@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registro cuento corto</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilosPrin.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilosElim.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+  
+    <!-- BOOTSWATCH -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="mod_body">
+    <div class="general">
+        <header>
+            <div class="cabecera">
+                <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                Curso de Lectura de Comprensión
+            </div>
+        </header>
+        <div style="padding-left: 40px; padding-top: 30px;">
+            <a class="boton_atras" href="administrarContenido.html">Atrás</a>
+       </div>  
+    <div class="contenedor">
+        <form id="formulario_eliminar">
+        <div class="titulo">Eliminar Cuento</div>
+
+        <div class="row"style="margin: 10px;">
+
+            <div class="col-md-4" id="etiquetas">
+                <div id="campos" >Título:</div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor" >
+                    <input type="text" id="titulobox"  name="titulo" size="48" autocomplete="off" required onkeydown="validacion()">
+                </div>
+                <div>
+                    <span id="text1"></span>
+                    <span id="text2"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"style="margin: 10px;">
+             <div class="col-md-4" id="etiquetas">
+                <div id="campos">Categoría: </div>
+            </div>
+            <div class="col-md-7">
+                <div class="input-contenedor">
+                    
+                    <select  name="combobox" id="categorias" class="formulario_input">
+                        <option value="Fabulas">Fabulas</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Clasicos">Clasicos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div align ="center">
+            <input type="submit" class="button" value="Eliminar">
+        </div>
+        </form>
+    </div>
+    <!-- CUSTOM CODE -->
+    <script src="formularioElim.js"></script> 
+</body>

@@ -69,6 +69,11 @@ body::-webkit-scrollbar-thumb{
 .textoHeader{
   display: inline-block;
 }
+@media screen and (max-width:1290px){
+  .boton_registro{
+    width: 55%;
+  }
+}
 @media screen and (max-width:990px){
   .textoHeader{
     display: none;
@@ -78,35 +83,52 @@ body::-webkit-scrollbar-thumb{
     width: 70%;
   }
 }
-
-@media screen and (max-width:990px){
-  
-   .contenedor{
-       width: 88%;
-       margin-left: 5%;
-   margin-right: 3%;
-   margin-top: 4.5%;
-   border-radius: 8px;
-   border: 3px solid #1799c0;
-   padding: 8px;
-      }
-   .header{
-     min-width: 100%;
-   }
-   .titulo{
-        font-size: 0.75cm;
-        margin-top: 0px;
-   }
-   .boton_atras{
-     font-size: 15px;
-     border-radius: 3px;
-     padding: 3px;
+@media screen and (max-width:780px){
+  .boton_registro{
+    width: 85%;
   }
-  .cabecera{
-   font-size: 0.4cm;
-   }
-   
-   .boton_registro{
-     min-width: fit-content;
-   }
+}
+@media screen and (max-width:650px){
+  .boton_registro{
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .titulo{
+   font-size: 0.8cm;
+  }
+  .boton_atras{
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 3px;
+ }
+ .cabecera{
+  font-size: 0.4cm;
+  }
+  #logo{
+  height: 60px;
+  }
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  } 
+  .boton_registro{
+    font-size: 23px;
+  }
+  
+}
+@media screen and (max-width:380px){
+  .boton_registro{
+    width: 95%;
+  }
+}
+@media screen and (max-width:350px){
+  .textoHeader{
+    display: none;
+  }
+  .boton_registro{
+   font-size: 20px;
+  }
 }

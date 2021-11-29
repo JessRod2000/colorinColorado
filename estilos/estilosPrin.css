@@ -35,7 +35,7 @@ background-color: #10BCE3;
   border: 2px solid #015e75;
 }
 .boton_personalizado:hover{
-  background-color: #a9cfe2;
+  background-color: #d3888800;
 }
 
 #botonesAdmin-Cerr, .boton_iniciar_sesion{
@@ -97,12 +97,28 @@ background-color: #10BCE3;
   float: right;
   margin-top: 13px;
 }
+.contenedoresNiveles{
+  width: 49%;
+  padding-bottom: 30px;
+}
+@media screen and (max-width:1020px){
+  .imagenNivel{
+    height: 200px;
+  }
+  
+  .boton_personalizado{
+    font-size: 27px;
+  }
+}
 @media screen and (max-width:990px){
   .textoHeader{
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
+  .imagenNivel{
+    height: 130px;
+  }
   .cabecera{
     font-size: 0.4cm;
   }
@@ -115,11 +131,8 @@ background-color: #10BCE3;
   #titulo{
     font-size: 0.8cm;
   }
-  #imagen{
-    height: 180px;
-  }
   .boton_personalizado{
-    font-size: 25px;
+    font-size: 18px;
   }
   .footer{
     font-size: 0.34cm;
@@ -146,5 +159,24 @@ background-color: #10BCE3;
     margin-top: 10px;
     font-size: 13.5px;
   } 
- 
+}
+  @media screen and (max-width:375px){
+    .boton_administrar{
+      padding: 2px;
+      margin-top: 8px;
+      font-size: 9.5px;
+    }
+    .boton_cerrar_sesion {
+      padding: 2px;
+      margin-top: 8px;
+      font-size: 9.5px;
+    }
+    .boton_personalizado{
+    font-size: 13px;
+    }
+    
+  #logo{
+    height: 50px;
+  }
+  
 }
