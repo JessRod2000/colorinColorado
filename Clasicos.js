@@ -39,17 +39,16 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
               const imagen =document.getElementById('myimg');
               imagen.style.height = "300px";
               imagen.src = doc.data().ImgUrl;
+              /*
               cuentoContainer.innerHTML += `<div id="contenido">
                <h3><p>${doc.data().ContenidoCuento}</p></h3>
-              </div>`;
+              </div>`;*/
+              cuentoContainer.innerHTML =`<div id="contenido"><h3>${saltoDeLinea(doc.data().ContenidoCuento)}</h3></div>`;
           }
       })
-      /*
-      function recuperar(rutaImg){
-        const imagen =document.getElementById('myimg');
-            imagen.style.height = "300px";
-            imagen.src = rutaImg;
-      }*/
+      function saltoDeLinea(texto){
+        return texto.replace(/\n/g,'<br/>')
+      }
     
     })
     
