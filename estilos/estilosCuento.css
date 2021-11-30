@@ -16,16 +16,16 @@ body::-webkit-scrollbar-thumb{
   margin-top: 20px;
   font-weight: 600;
   font-size: 25px;
-  color: white;
+  color: #08374e;
   background-color: #0000;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 2px solid #08374e;
   position:absolute;
   top:20px;
   right:10px;
 }
 .boton_cerrar_sesion:hover{
-  background-color: #078061;
+  background-color: #a9cfe2;
 }
 .boton_atras{
     text-decoration: none;

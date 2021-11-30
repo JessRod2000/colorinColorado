@@ -35,7 +35,7 @@ background-color: #10BCE3;
   border: 2px solid #015e75;
 }
 .boton_personalizado:hover{
-  background-color: #d3888800;
+  background-color: #a9cfe2;
 }
 
 #botonesAdmin-Cerr, .boton_iniciar_sesion{
@@ -44,20 +44,19 @@ background-color: #10BCE3;
   margin-top: 13px;
 }
 .boton_cerrar_sesion, .boton_iniciar_sesion{
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Arima Madurai', cursive;
-    padding: 3px;
-    font-weight: 600;
-    font-size: 25px;
-    color: white;
-    background-color: #0000;
-    border-radius: 5px;
-    border: 2px solid white;
-    
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Arima Madurai', cursive;
+  padding: 3px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #08374e;
+  background-color: #0000;
+  border-radius: 5px;
+  border: 2px solid #08374e;
 }
 .boton_cerrar_sesion:hover , .boton_iniciar_sesion:hover{
-  background-color: #2480ad;
+  background-color: #a9cfe2;
 }
 
 .boton_administrar{
@@ -67,12 +66,13 @@ background-color: #10BCE3;
   padding: 3px;
   font-weight: 600;
   font-size: 25px;
+  color: #08374e;
   background-color: #0000;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 2px solid #08374e;
 }
 .boton_administrar:hover{
-  background-color: #2480ad;
+  background-color: #a9cfe2;
 }
 .footer{
   text-align: center;
