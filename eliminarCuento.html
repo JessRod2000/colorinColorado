@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eliminar cuento</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilosPrin.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilosElim.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+     <!-- BOOTSWATCH -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+ 
+</head>
+
+<body onload="verificarUsuario()">
+    <body class="mod_body">
+        <div class="general">
+            <header>
+                <div class="cabecera">    
+                    <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+                    <div class="textoHeader">Curso de Lectura de Comprensión</div>
+                   
+                    <div id="botonCerr">
+                      <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()">Cerrar Sesión</button>
+                    </div>
+            </header>
+            <div style="padding-left: 40px; padding-top: 30px;">
+                <a class="boton_atras" href="administrarContenido.html">Atrás</a>
+           </div>  
+        <div class="contenedor">
+            <form id="form">
+            <div class="titulo">Eliminar Cuento</div>
+    
+            <div class="row"style="margin: 10px;">
+    
+                <div class="col-md-4" id="etiquetas">
+                    <div id="campos" >Título:</div>
+                </div>
+                <div class="col-md-7">
+                    <div class="input-contenedor" >
+                        <input type="input" id="cuentobox"  name="titulo" size="48" placeholder="Escriba aquí el título" autocomplete="off" required onkeyup="validacion()">
+                    </div>
+
+                    <div>
+                        <span id="text1"></span>
+                        <span id="text2"></span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row"style="margin: 10px;">
+                 <div class="col-md-4" id="etiquetas">
+                    <div id="campos">Categoría: </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="input-contenedor">
+                        
+                        <select  name="combobox" id="categorias" class="formulario_input">
+                            <option value="Fabulas">Fábulas</option>
+                            <option value="Fantasia">Fantasía</option>
+                            <option value="Clasicos">Clásicos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div align ="center">
+                <input type="submit" class="button" value="Eliminar">
+            </div>
+            </form>
+        </div>
+        
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>  
+  
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+          apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+          authDomain: "colorin-colorado-f857f.firebaseapp.com",
+          databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+          projectId: "colorin-colorado-f857f",
+          storageBucket: "colorin-colorado-f857f.appspot.com",
+          messagingSenderId: "31331535773",
+          appId: "1:31331535773:web:55d57a73caeb602085bd74",
+          measurementId: "G-37YPHDXTPN"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script type ="text/javascript">
+        function validacion(){
+            var titulobox = document.getElementById("cuentobox").value;
+            var text1 = document.getElementById("text1");
+            var pattern = /^[A-Za-z\d\s\u00fc\u003f\u00bf\u0021\u00a1\u00f1\u00dc\u002c\u00b4\u00c1\u00e1\u00c9\u00e9\u00cd\u00ed\u00d3\u00f3\u00da\u00fa]+$/;
+
+            if(titulobox.match(pattern)){
+                text1.innerHTML = "";
+            }
+            
+            else{
+                text1.innerHTML = "Solo se aceptan caracteres alfanuméricos, ¿, ?, ¡, !";
+    
+            }
+            if(titulobox == ""){
+                text1.innerHTML = "";
+            }
+        }
+    </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged,
+    } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+      authDomain: "colorin-colorado-f857f.firebaseapp.com",
+      databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+      projectId: "colorin-colorado-f857f",
+      storageBucket: "colorin-colorado-f857f.appspot.com",
+      messagingSenderId: "31331535773",
+      appId: "1:31331535773:web:55d57a73caeb602085bd74",
+      measurementId: "G-37YPHDXTPN"
+    };
+    const añadir = document.getElementById("añadir");
+    const logoutButton = document.getElementById("logoutButton");
+    const usuario = localStorage.getItem("datosUsuario");
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    function logout() {
+      const auth = getAuth();
+      signOut(auth)
+        .then(() => {
+          localStorage.removeItem('datosUsuario');
+          const usuario = localStorage.getItem("datosUsuario");
+          window.location.href='index.html' ;
+          console.log('funciono')
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+    function verificarUsuario() {
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            console.log('logeado')
+            const uid = user.uid;
+          } else {
+            alert('Deberá iniciar sesión para tener accesos especiales.');
+            window.location.href = 'index.html';
+          }
+        });
+      }
+    window.verificarUsuario = verificarUsuario;
+    window.logout = logout;
+  </script>
+        <script src="eliminarCuento.js"></script> 
+ </body>
+ </html>

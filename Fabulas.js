@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
         tmp=queryString.split('=');
         $_GET[tmp[1]]=unescape(tmp[1].split('+').join(' '));
         $_GET[tmp[0]]=unescape(tmp[0]);
+        /*
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("	Ã¡","á");
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã©","é");
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã­","í");
@@ -25,19 +26,22 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ãº","ú");
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã¼","ü");
         $_GET[tmp[1]]=$_GET[tmp[1]].replace("Ã±","ñ");
-       
+       */
         }
 
          // console.log(doc.data().TituloCuento)
-          if(doc.data().TituloCuento == $_GET[tmp[1]]){
+          if(doc.data().ImgUrl == $_GET[tmp[0]]){
               
               cuentoTitulo.innerHTML += `<div id="titulo">
               ${doc.data().TituloCuento}
-              </div>`
-              recuperar($_GET[tmp[0]]);
+              </div>`;
+              const imagen =document.getElementById('myimg');
+              imagen.style.height = "300px";
+              imagen.src = doc.data().ImgUrl;
+              //recuperar($_GET[tmp[0]]);
               cuentoContainer.innerHTML += `<div id="contenido">
                <h3><p>${doc.data().ContenidoCuento}</p></h3>
-              </div>`
+              </div>`;
           }
       })
       
@@ -48,5 +52,3 @@ window.addEventListener('DOMContentLoaded', async(e) =>{
       }
     
     })
-    
-

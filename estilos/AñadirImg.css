@@ -1,0 +1,25 @@
+#Images .add-new-photo {
+    display: flex;
+    border: 4px dashed #fff;
+    height: 100%;
+    min-height: 240px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+
+#Images .add-new-photo.first:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+#add-photo-container input {
+    display: none;
+}
