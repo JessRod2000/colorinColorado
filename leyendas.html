@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendas</title>
+	  <link rel="stylesheet" type="text/css" href="estilos/estilosCuento.css">
+	  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="general">
+    <header>
+        <div class="cabecera">
+            <a href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+            Curso de Lectura de Comprensión
+          </div>
+    </header>
+    <div style="padding-left: 35px; padding-top: 25px;">
+        <a class="boton_atras" href="CuentosLargos.html">Atrás</a>
+    </div>
+    
+    <!--estos contenedores-->
+    <div id="cuento-titulo" class="titulo"></div>
+    <div align='center'>
+        <img id="myimg">
+    </div>
+    <div id="cuento-container"style="text-align: justify;"><p></p>
+    </div>
+
+    <div id="actividades">
+  </div>
+    <!--estos contenedores-->
+   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script> 
+   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script> 
+   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>  
+ 
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+ 
+   <script>
+     // Your web app's Firebase configuration
+     var firebaseConfig = {
+         apiKey: "AIzaSyAbFC7FyNe9t8VBGO8xXPu-XtFSWeuo2i0",
+       authDomain: "colorin-colorado-f857f.firebaseapp.com",
+       databaseURL: "https://colorin-colorado-f857f-default-rtdb.firebaseio.com",
+       projectId: "colorin-colorado-f857f",
+       storageBucket: "colorin-colorado-f857f.appspot.com",
+       messagingSenderId: "31331535773",
+       appId: "1:31331535773:web:55d57a73caeb602085bd74",
+       measurementId: "G-37YPHDXTPN"
+     };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+   </script>
+ 
+   <!-- CUSTOM CODE -->
+   <script src="leyendas.js"></script> 
+</body>
+</html>
