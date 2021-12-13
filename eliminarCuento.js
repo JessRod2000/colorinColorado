@@ -149,7 +149,7 @@ async function verificarExistencia() {
             if(terr=="false" || his=="false" ||ley=="false"){
                 alert("El cuento no se encuentra registrado en el nivel Cuentos " + nivel);
                 otronivel="true";
-                
+                location.reload(true);
             }
             
         }else{
@@ -157,7 +157,7 @@ async function verificarExistencia() {
             if(fab=="false" || fan=="false" ||clasi=="false"){
                 alert("El cuento no se encuentra registrado en el nivel Cuentos " + nivel);
                 otronivel="true";
-                
+                location.reload(true);
             }
         }
        if(otronivel== "false"){
@@ -171,7 +171,7 @@ async function verificarExistencia() {
                 ley = "true";
                 terr = "true";
                 existe = "true";
-                
+                location.reload(true);
             } else {
                 await eliminar();
 
