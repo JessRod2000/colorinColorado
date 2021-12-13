@@ -270,4 +270,56 @@ function testTitulos() {
         
     });
 }
+function categoriasC(){
+    return new Promise((resolve, reject) => {
+        if (categoria == "Fabulas") {
+            if (fan == "false") {
+                existe = "false";
+                cat = "Fábulas"
+            } else {
+                if (clasi == "false") {
+                    existe = "false";
+                    cat = "Fábulas"
+                }
+            }
+            setTimeout(() => {
+                resolve();
+                ;
+            }, 1000);
+        } else {
+            if (categoria == "Fantasia") {
+                if (fab == "false") {
+                    existe = "false";
+                    cat = "Fantasía"
+                } else {
+                    if (clasi == "false") {
+                        existe = "false";
+                        cat = "Fantasía"
+                    }
+                }
+                setTimeout(() => {
+                    resolve();
+                    ;
+                }, 1000);
+            } else {
+                if (categoria == "Clasicos") {
+                    if (fan == "false") {
+                        existe = "false";
+                        cat = "Clásicos"
+                    } else {
+                        if (fab == "false") {
+                            existe = "false";
+                            cat = "Clásicos"
+                        }
+                    }
+                    setTimeout(() => {
+                        resolve();
+                        ;
+                    }, 1000);
+                }
 
+            }
+        }
+    });
+
+}
