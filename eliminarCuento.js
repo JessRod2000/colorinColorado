@@ -323,3 +323,56 @@ function categoriasC(){
     });
 
 }
+function categoriasL(){
+    return new Promise((resolve, reject) => {
+        if (categoria == "Historia") {
+            if (ley == "false") {
+                existe = "false";
+                cat = "Historia"
+            } else {
+                if (terr == "false") {
+                    existe = "false";
+                    cat = "Historia"
+                }
+            }
+            setTimeout(() => {
+                resolve();
+                ;
+            }, 1000);
+        } else {
+            if (categoria == "Leyendas") {
+                if (his == "false") {
+                    existe = "false";
+                    cat = "Leyendas"
+                } else {
+                    if (terr == "false") {
+                        existe = "false";
+                        cat = "Leyendas"
+                    }
+                }
+                setTimeout(() => {
+                    resolve();
+                    ;
+                }, 1000);
+            } else {
+                if (categoria == "Terror") {
+                    if (his == "false") {
+                        existe = "false";
+                        cat = "Terror"
+                    } else {
+                        if (ley == "false") {
+                            existe = "false";
+                            cat = "Terror"
+                        }
+                    }
+                    setTimeout(() => {
+                        resolve();
+                        ;
+                    }, 1000);
+                }
+
+            }
+        }
+    });
+
+}
