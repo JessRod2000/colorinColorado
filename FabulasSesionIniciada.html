@@ -15,22 +15,16 @@
 <body onload="verificarUsuario()">
    <div class="general">
     <header >
-          <div class="cabecera">
-            <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
-            Curso de Lectura de Comprensión
-          </div>
+      <div class="cabecera">    
+        <a href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+        <div class="textoHeader">Curso de Lectura de Comprensión</div>
+        <div id="botonCerr">
+         <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()">Cerrar Sesión</button>
+        </div>
     </header>
     <div style="padding-left: 35px; padding-top: 25px;">
         <a class="boton_atras" href="CuentosCortosSesionIniciada.html">Atrás</a>
     </div>
-
-
-    <!-- //desde aqui// -->
-    <div id="botonCerr">
-      <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()">Cerrar Sesión</button>
-    </div>
-    <!-- //hasta aqui// -->
-
 
 
     <!--estos contenedores-->
@@ -38,7 +32,7 @@
     <div align='center'>
         <img id="myimg">
     </div>
-    <div id="cuento-container" style="text-align: center;"><p></p></div>
+    <div id="cuento-container" style="text-align: justify;"><p></p></div>
 </div>
     <!--estos contenedores-->
    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
@@ -115,7 +109,7 @@
             console.log('logeado')
             const uid = user.uid;
           } else {
-            console.log('no logeado');
+            alert('Deberá iniciar sesión para tener accesos especiales.');
             window.location.href = 'index.html';
           }
         });

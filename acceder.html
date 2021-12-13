@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acceso Administradores</title>
-  <link rel="stylesheet" type="text/css" href="estilos/estilosAcceder.css">  
+  <link rel="stylesheet" type="text/css" href="estilos/estilosAcceder.css">
   <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
 </head>
+
 <body>
-    <header>
+  <header>
 
-        <div class="cabecera">    
-            <a href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
-            Curso de Lectura de Comprensión
-            </div>
-          </header>
-          <div style="padding-left: 35px; padding-top: 25px;">
-           <a class="boton_atras" href="index.html">Atrás</a>
+    <div class="cabecera">
+      <a href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+      Curso de Lectura de Comprensión
+    </div>
+  </header>
+  <div style="padding-left: 35px; padding-top: 25px;">
+    <a class="boton_atras" href="index.html">Atrás</a>
     </header>
-     
+
     <div class="contenedor">
-            <div class="titulo">Inicio de Sesión</div>
+      <div class="titulo">Inicio de Sesión</div>
 
-          <div class="mov">
-            <div style="margin: 18px;">
-              <div id="correo">Correo Electrónico:</div>
-              <div class="input-contenedor">
-                <input id="email" type="email" placeholder="Correo Electrónico">
-                </div>
-            </div>
-            <div style="margin: 18px;">
-               <div id="contraseña">Contraseña:</div>
-               <div class="input-contenedor">
-                 <input id="password" type="password" placeholder="Contraseña" autocomplete="off">
-                 </div>
-            </div> 
+      <div class="mov">
+        <div style="margin: 18px;">
+          <div id="correo">Correo Electrónico:</div>
+          <div class="input-contenedor">
+            <input id="email" type="email" placeholder="Correo Electrónico">
           </div>
-             <div align ="center">
-                <button type="submit" class="button" onclick="login()">Acceder</button>
-             </div>
-
+        </div>
+        <div style="margin: 18px;">
+          <div id="contraseña">Contraseña:</div>
+          <div class="input-contenedor">
+            <input id="password" type="password" placeholder="Contraseña" autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div align="center">
+        <button type="submit" class="button" onclick="login()">Acceder</button>
+      </div>
+      <div style="margin: 18px;">
+        <div align="center" id="link">
+          <a class="link" href="recuperar.html">¿Olvidó su contraseña?</a>
+        </div>
+      </div>
     </div>
     <script type="module">
       // Import the functions you need from the SDKs you need
@@ -75,31 +81,33 @@
       function login() {
         const correo = document.getElementById("email").value;
         const contraseña = document.getElementById("password").value;
-        if (correo === ''|| contraseña === ''){
+        if (correo === '' || contraseña === '') {
           alert('El campo de Correo y Contraseña son obligatorios')
         } else {
-        console.log(correo);
-        console.log(contraseña);
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth, correo, contraseña)
-          .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            localStorage.setItem("datosUsuario", JSON.stringify(user));
-            window.location.href='indexSesionIniciada.html' ;
-            const usuario = localStorage.getItem("datosUsuario");
-            console.log(user);
-            // ...
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert('El correo o la contraseña son incorrectos, Por favor verifica los datos')
+          console.log(correo);
+          console.log(contraseña);
+          const auth = getAuth();
+          signInWithEmailAndPassword(auth, correo, contraseña)
+            .then((userCredential) => {
+              // Signed in
+              const user = userCredential.user;
+              localStorage.setItem("datosUsuario", JSON.stringify(user));
+              window.location.href = 'indexSesionIniciada.html';
+              const usuario = localStorage.getItem("datosUsuario");
+              console.log(user);
+              // ...
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert('El correo o la contraseña son incorrectos, Por favor verifica los datos')
 
-          });
-        console.log("probando");
-      }}
+            });
+          console.log("probando");
+        }
+      }
       window.login = login;
     </script>
 </body>
-</html> 
+
+</html>

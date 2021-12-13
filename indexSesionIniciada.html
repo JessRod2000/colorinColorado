@@ -15,11 +15,11 @@
   <div class="general">
     <header >
       <div class="cabecera">
-     <a title="Cuentos cortos" href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
+     <a title="" href="indexSesionIniciada.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
        <div class="textoHeader">Curso de Lectura de Comprensión</div>
        <div id="botonesAdmin-Cerr">
-        <a class="boton_administrar" href="administrarContenido.html">Administrar contenido</a>
-        <button id="logoutButton" class="boton_cerrar_sesion" onclick="logout()">Cerrar Sesion</button>
+        <button id="logoutButton"class="boton_administrar"  ><a href="administrarContenido.html" style="color: white;">Administrar contenido</a></button>
+        <button id="logoutButton" class="boton_administrar" onclick="logout()"> <a style="color: white;"href=" " >Cerrar Sesión</a></button>
        </div>
         
       </div>
@@ -28,11 +28,18 @@
    <div id="titulo">
       Colorín Colorado
     </div>
-	<div align="center" style="padding-bottom: 30px; margin-top: 35px;">
-    <a href="CuentosCortosSesionIniciada.html"> <img src="iconos/cuentosCortos.png" height="250px" alt="cortitos" /></a>
-    
-    <div align="center"style="padding-left: 35px; padding-top: 25px;">
-      <a class="boton_personalizado" href="CuentosCortosSesionIniciada.html">Cuentos Cortos</a>
+    <div style=" margin-top: 35px;">
+      <div  class="contenedoresNiveles"align="center"  style="margin-right: 2% ;float: right">
+        <a href="cuentosLargosSesionIniciada.html"> <img  class="imagenNivel" src="iconos/cuentoslargos.png" height="250px" alt="largos" /></a>
+        <div style="padding-left: 4px; padding-top: 25px;">
+          <a class="boton_personalizado" href="cuentosLargosSesionIniciada.html">Cuentos Largos</a>
+        </div>
+      </div>
+      <div class="contenedoresNiveles" align="center" >
+        <a href="cuentoscortossesioniniciada.html"> <img class="imagenNivel"src="iconos/cuentosCortos.png" height="250px" alt="cortitos" /></a>
+          <div style="padding-left: 1px; padding-top: 25px;">
+           <a class="boton_personalizado" href="cuentoscortossesioniniciada.html">Cuentos Cortos</a>
+           </div>
     </div>
     
 
@@ -111,7 +118,7 @@
           console.log('logeado')
           const uid = user.uid;
         } else {
-          console.log('no logeado');
+          alert('Deberá iniciar sesión para tener accesos especiales.');
           window.location.href = 'index.html';
         }
       });

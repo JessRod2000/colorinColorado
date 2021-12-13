@@ -10,22 +10,19 @@ body::-webkit-scrollbar-thumb{
   border-radius:5px;
 }
 .boton_cerrar_sesion{
+  display: inline-block;
   text-decoration: none;
   font-family: 'Arima Madurai', cursive;
   padding: 3px;
-  margin-top: 20px;
   font-weight: 600;
   font-size: 25px;
-  color: #08374e;
+  color: white;
   background-color: #0000;
   border-radius: 5px;
-  border: 2px solid #08374e;
-  position:absolute;
-  top:20px;
-  right:10px;
+  border: 2px solid white;
 }
 .boton_cerrar_sesion:hover{
-  background-color: #a9cfe2;
+  background-color: #078061;
 }
 .boton_atras{
     text-decoration: none;
@@ -62,14 +59,54 @@ body::-webkit-scrollbar-thumb{
     margin-top: 35px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25px;
     font-size: 0.7cm;
+}
+.actividades{
+  margin-bottom: 10px;
 }
 
 .general{
   min-width: 100%;
   max-height: 100%;
 }
+#botonCerr{
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+}
 
+.textoHeader{
+  display: inline-block;
+}
+
+#cuento-actividad, #cuento-glosario {
+  font-family: 'Arima Madurai', cursive;
+  text-decoration: none;
+  padding: 4px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 0.8cm;
+  color: #ffffff;
+  background-color: #07c898;
+  border-radius: 5px;
+  border: 2px solid #078061;
+}
+  #onclick{
+    border-radius: 5px;
+    border: 3px solid #078061;
+    width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px ;
+  font-family: 'Arima Madurai', cursive;
+  }
+
+@media screen and (max-width:990px){
+  .textoHeader{
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
   .titulo{
        font-size: 0.8cm;
@@ -90,4 +127,18 @@ body::-webkit-scrollbar-thumb{
   #logo{
   height: 60px;
   }
+  
+  .boton_cerrar_sesion{
+    padding: 2px;
+    margin-top: 10px;
+    font-size: 13.5px;
+  } 
+  #cuento-actividad, #cuento-glosario {
+    font-size: 0.5cm;
+  }
+  #onclick{
+    width: 75%;
+    font-size: large;
+    text-align: justify;
+}
 }

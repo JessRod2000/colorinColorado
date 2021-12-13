@@ -2,33 +2,39 @@
 <html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clasicos</title>
-	<link rel="stylesheet" type="text/css" href="estilos/estilosCuento.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
+    <title>Leyendas</title>
+	  <link rel="stylesheet" type="text/css" href="estilos/estilosCuento.css">
+	  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
-    <!-- BOOTSWATCH -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@800&display=swap" rel="stylesheet">
 
 </head>
 <body>
+    <div class="general">
     <header>
         <div class="cabecera">
             <a href="index.html"><img id="logo" src="iconos/logo1.4.png" height="75px" /></a>
             Curso de Lectura de Comprensión
-          </div>  
+          </div>
     </header>
     <div style="padding-left: 35px; padding-top: 25px;">
-        <a class="boton_atras" href="CuentosCortos.html">Atrás</a>
-    </div> 
+        <a class="boton_atras" href="CuentosLargos.html">Atrás</a>
+    </div>
     
     <!--estos contenedores-->
     <div id="cuento-titulo" class="titulo"></div>
     <div align='center'>
         <img id="myimg">
     </div>
-    <div id="cuento-container" style="text-align: justify;"></div>
+    <div id="cuento-container"style="text-align: justify;"><p></p>
+    </div>
+
+    <div id="actividades">
+  </div>
     <!--estos contenedores-->
    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script> 
@@ -56,6 +62,6 @@
    </script>
  
    <!-- CUSTOM CODE -->
-   <script src="Clasicos.js"></script> 
+   <script src="leyendas.js"></script> 
 </body>
 </html>
