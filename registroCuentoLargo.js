@@ -192,16 +192,17 @@ function contar_palabras_contenido(){
     //Contamos todos los trozos de cadenas que existen
     var numeroPalabras = textoTroceado.length;
     //Mostramos el número de palabras
-    if(numeroPalabras>1500){
+    if(numeroPalabras<1500 && numeroPalabras>500){
+        controlar=true;
+    }else if(numeroPalabras>1500){
         text3.innerHTML = "La cantidad máxima de palabras aceptadas es de 1500";
         //alert("la cantidad máxima de palabras aceptadas es de 500");
         controlar=false;
         //document.getElementById("contenidobox").value ="";
-    }else{
-        if(numeroPalabras<500){
+    }else if(numeroPalabras<500){
             text3.innerHTML = "La cantidad mínima de palabras aceptadas es de 500";
             controlar=false;
-        }
+        
     }
     //alert(numeroPalabras);
 }
