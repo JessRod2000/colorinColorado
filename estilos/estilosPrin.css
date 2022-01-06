@@ -1,21 +1,47 @@
-
+body{
+    overflow-x: hidden;
+ }
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background: #10BCE3;
+    border-radius:5px;
+  }
+header {
+	background-color: #10BCE3;
+}
 #titulo{
-  text-align: center;
-	color: #09809b;
-  font-family: 'Rampart One', cursive;
+	color: #10BCE3;
+	font-family: 'Leckerli One', cursive;
   font-size: 1.7cm;
 } 
-.cabecera{
-  font-family: 'Arima Madurai', cursive;
-  text-align: left;
-  font-size: 0.65cm;
-  padding:1.8%;
-  min-width: 580px;
-  background-color: #10BCE3;
+#boton{
+	font-family: 'Leckerli One', cursive;
+	font-size: large;
+}
+#cabecera{
+	font-family: 'Leckerli One', cursive;
+	text-align: left;
+  font-size: 0.7cm;
+	padding-top: 30px;
+	padding-bottom: 40px;
+	padding-left: 25px;
+}
+
+.class50{
+	width: 50%;
+	float: left;
+}
+
+#logo{
+	width: 10%;
+	float: left;
+	padding-right: 15px;
 }
 .boton_personalizado{
     text-decoration: none;
-    font-family: 'Arima Madurai', cursive;
+	font-family: 'Leckerli One', cursive;
     padding: 5px;
     margin-top: 20px;
     font-weight: 600;
@@ -28,53 +54,20 @@
   .boton_personalizado:hover{
     background-color: #a9cfe2;
   }
-body::-webkit-scrollbar {
-    width: 10px;
+  #cabecera{
+    margin-left: 150px;
+    font-size: xx-large;
   }
-body::-webkit-scrollbar-thumb{
-    background: #10BCE3;
-    border-radius:5px;
-}
-.footer{
-  text-align: center;
-  padding-right:10%;
-  padding-left: 10%;
-  margin-bottom: 10px;
-  font-size:0.53cm ;
-  font-family: 'Arima Madurai', cursive;
-  min-width: 80%;
-  max-height: auto;
-  margin-bottom: 3%;
-}
-.general{
-  min-width: 100%;
-  max-height: 100%;
-}
-body{
-    overflow-x: hidden;
-}
-@media screen and (max-width: 580px) {
-  body{
-    margin-top: 4rem;
+  
+
+  @media screen and (max-width: 400px) {
+    body{
+      margin-top: 4rem;
+    }
+    .headerMain{
+      height: initial;
+    }
+    #cabecera{
+      margin-left: 150px;
+    }
   }
-  .cabecera{
-    font-size: 0.4cm;
-  }
-  #logo{
-    height: 60px;
-  }
-  #titulo{
-    font-size: 0.8cm;
-  }
-  #imagen{
-    height: 180px;
-  }
-  .boton_personalizado{
-    font-size: 25px;
-  }
-  .footer{
-    font-size: 0.34cm;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
-}
